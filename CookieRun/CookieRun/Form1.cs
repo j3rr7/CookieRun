@@ -16,5 +16,22 @@ namespace CookieRun
         {
             InitializeComponent();
         }
+        cookie main = new cookie(100, 100, 100, 100, 100, "tile", "0", 12, "hidup");
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            main.getImage(g);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            main.jenis_cookie_gambarke++;//ditambah sampai 12-17
+            Invalidate();
+        }
     }
 }
