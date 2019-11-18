@@ -11,7 +11,7 @@ namespace CookieRun
     class Cookies
     {
         int jenis; //0 = Brave | 1 = Hero | 2 = Angel | -ToDo add more dynamic feature
-        int status; //0 = idle | 1 = running | 2 = jumping | -ToDo add more event and validation
+        int status; //0 = idle | 1 = running | 2 = jumping | 3 = sliding | 99 = runboosted -ToDo add more event and validation
 
         string jenisCookie;
         string statusCookie;
@@ -67,6 +67,14 @@ namespace CookieRun
             else if (this.status == 2)
             {
                 this.statusCookie = "jump";
+            }
+            else if (this.status == 3)
+            {
+                this.statusCookie = "slide";
+            }
+            else if (this.status == 99)
+            {
+                this.statusCookie = "run_boost";
             }
             else
             {

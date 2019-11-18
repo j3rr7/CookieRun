@@ -111,6 +111,16 @@ namespace CookieRun
                     player.Status = 2;
                 }
             }
+
+            //KEYCODE for speed is doubled (just dor debugging process - please delete later)
+            if (e.KeyCode == Keys.D)
+            {
+                if (player.Status == 1)//if player is running
+                {
+                    player.Status = 99;//run boost
+                    this.GerakPlayerTimer.Interval = 20;//change
+                }
+            }
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -124,11 +134,23 @@ namespace CookieRun
                     player.Status = 1;
                 }
             }
+
+            //KEYCODE for speed is doubled (just dor debugging process - please delete later)
+            if (e.KeyCode == Keys.D)
+            {
+                if (player.Status == 99)//if player is runboost
+                {
+                    player.Status = 1;//restore state to running
+                    this.GerakPlayerTimer.Interval = refreshTickPlayer;//restore 
+                }
+            }
         }
 
 
 
 
+
+        //[ToDo do the dynamic animation of jumping and sliding]
         //COBA COBA
         bool isJumping = false;
         public void playerJumping()
