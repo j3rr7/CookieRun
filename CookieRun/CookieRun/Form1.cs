@@ -29,6 +29,8 @@ namespace CookieRun
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            picPlayer.Visible = false;
+
             this.GerakPlayerTimer.Interval = this.refreshTickPlayer; //Constraint interval player gerak
 
             //Timer Start
@@ -47,7 +49,6 @@ namespace CookieRun
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             g = e.Graphics;
-
             //Draw cooldown if nessesary
             //=====================
             int center_x = (this.Width / 2) - 90; //trick to center the text x
@@ -58,6 +59,9 @@ namespace CookieRun
             }
             //=====================
 
+
+            Rectangle r = new Rectangle(picPlayer.Location, new Size(60, 90));
+            g.FillRectangle(new SolidBrush(Color.Red), r);
         }
 
 
@@ -125,7 +129,7 @@ namespace CookieRun
             //KEYCODE SPACE , W ,and Up arrow
             if (e.KeyCode == Keys.Space || e.KeyCode == Keys.W || e.KeyCode == Keys.Up)
             {
-                if (player.Status == 1)//Check if player is jumping
+                if (player.Status == 1)//Check if player is running
                 {
                     playerJumping();//DEPRECATED
                     player.Status = 2;
@@ -208,5 +212,12 @@ namespace CookieRun
             }
         }
 
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 't')
+            {
+                picPlayer.Visible = !picPlayer.Visible;
+            }
+        }
     }
 }
