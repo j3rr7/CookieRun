@@ -123,16 +123,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile009.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile010.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Brave\tile020.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -323,6 +313,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Brave\brave_jump_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_slide_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_slide_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

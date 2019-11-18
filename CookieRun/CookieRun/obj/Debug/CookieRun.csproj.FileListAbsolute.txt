@@ -71,8 +71,6 @@ C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images
 C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile004.png
 C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile005.png
 C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile006.png
-C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile009.png
-C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile010.png
 C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile020.png
 C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile021.png
 C:\Users\JeremyF\Documents\GitHub\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile026.png

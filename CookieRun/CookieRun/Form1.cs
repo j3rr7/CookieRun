@@ -23,6 +23,10 @@ namespace CookieRun
             InitializeComponent();
         }
         
+
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             this.GerakPlayerTimer.Interval = this.refreshTickPlayer; //Constraint interval player gerak
@@ -35,6 +39,10 @@ namespace CookieRun
             //=====================
 
         }
+
+
+
+
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -52,6 +60,10 @@ namespace CookieRun
 
         }
 
+
+
+
+
         //Event validate every few Second
         //=====================
         private void ValidationTimer_Tick(object sender, EventArgs e)
@@ -59,6 +71,10 @@ namespace CookieRun
             Invalidate();
         }
         //=====================
+
+
+
+
 
         //Timer for cooldown as same as player wont move until cooldown is over
         //=====================
@@ -76,6 +92,10 @@ namespace CookieRun
             }
         }
         //=====================
+
+
+
+
 
         //Run gerak player
         //=====================
@@ -121,7 +141,20 @@ namespace CookieRun
                     this.GerakPlayerTimer.Interval = 20;//change
                 }
             }
+
+            //KEYCODE for sliding
+            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down || e.KeyCode == Keys.LShiftKey)
+            {
+                if (player.Status == 1) //if player is running
+                {
+                    player.Status = 3; //sliding
+                }
+            }
         }
+
+
+
+
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
@@ -142,6 +175,15 @@ namespace CookieRun
                 {
                     player.Status = 1;//restore state to running
                     this.GerakPlayerTimer.Interval = refreshTickPlayer;//restore 
+                }
+            }
+
+            //KEYCODE for sliding
+            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down || e.KeyCode == Keys.LShiftKey)
+            {
+                if (player.Status == 3) //if player is sliding
+                {
+                    player.Status = 1; //restore state to running
                 }
             }
         }

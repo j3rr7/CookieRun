@@ -53,9 +53,9 @@
             // 
             // picPlayer
             // 
-            this.picPlayer.Location = new System.Drawing.Point(12, 348);
+            this.picPlayer.Location = new System.Drawing.Point(12, 318);
             this.picPlayer.Name = "picPlayer";
-            this.picPlayer.Size = new System.Drawing.Size(90, 90);
+            this.picPlayer.Size = new System.Drawing.Size(120, 120);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
