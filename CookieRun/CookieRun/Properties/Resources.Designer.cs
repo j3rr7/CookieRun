@@ -19,7 +19,7 @@ namespace CookieRun.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,9 +63,9 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tile012 {
+        internal static System.Drawing.Bitmap brave_idle_1 {
             get {
-                object obj = ResourceManager.GetObject("tile012", resourceCulture);
+                object obj = ResourceManager.GetObject("brave_idle_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tile013 {
+        internal static System.Drawing.Bitmap brave_idle_2 {
             get {
-                object obj = ResourceManager.GetObject("tile013", resourceCulture);
+                object obj = ResourceManager.GetObject("brave_idle_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tile014 {
+        internal static System.Drawing.Bitmap brave_idle_3 {
             get {
-                object obj = ResourceManager.GetObject("tile014", resourceCulture);
+                object obj = ResourceManager.GetObject("brave_idle_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tile015 {
+        internal static System.Drawing.Bitmap brave_idle_4 {
             get {
-                object obj = ResourceManager.GetObject("tile015", resourceCulture);
+                object obj = ResourceManager.GetObject("brave_idle_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tile016 {
+        internal static System.Drawing.Bitmap brave_jump_1 {
             get {
-                object obj = ResourceManager.GetObject("tile016", resourceCulture);
+                object obj = ResourceManager.GetObject("brave_jump_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,89 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tile017 {
+        internal static System.Drawing.Bitmap brave_jump_2 {
             get {
-                object obj = ResourceManager.GetObject("tile017", resourceCulture);
+                object obj = ResourceManager.GetObject("brave_jump_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_1 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_2 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_3 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_5 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_boost_1 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_boost_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_boost_2 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_boost_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_boost_3 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_boost_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_run_boost_4 {
+            get {
+                object obj = ResourceManager.GetObject("brave_run_boost_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

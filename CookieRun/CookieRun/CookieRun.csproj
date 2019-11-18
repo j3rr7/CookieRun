@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cookie.cs" />
+    <Compile Include="Cookies.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,16 +123,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile007.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile008.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Brave\tile009.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -143,72 +133,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile012.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile013.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile014.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile015.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile016.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile017.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile018.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile019.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Brave\tile020.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Brave\tile021.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile022.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile023.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile024.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Brave\tile025.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -353,7 +283,46 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Brave.txt" />
+    <None Include="Images\Brave\brave_run_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_run_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_run_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_run_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_run_boost_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_run_boost_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_run_boost_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_run_boost_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idle_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idle_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idle_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idle_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_jump_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_jump_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
