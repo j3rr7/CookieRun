@@ -18,6 +18,8 @@ namespace CookieRun
 
         Cookies player = new Cookies();
 
+
+
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +31,8 @@ namespace CookieRun
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            picPlayer.BackColor = Color.Transparent;
+
             this.GerakPlayerTimer.Interval = this.refreshTickPlayer; //Constraint interval player gerak
 
             //Timer Start
@@ -57,6 +61,8 @@ namespace CookieRun
                 g.DrawString(this.timer.ToString(), new Font("Verdana", 100f), new SolidBrush(Color.DarkCyan), new Point(center_x, center_y));
             }
             //=====================
+            Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 60), new Size(50, 60));
+            g.DrawRectangle(new Pen(Color.Red, 2), r);
 
         }
 
