@@ -26,34 +26,31 @@ namespace CookieRun
         
         public Image getAnimation(int counterAnimation)//parameter as counter for the animation sequences
         {
-            Image temp = null;//init temp as null
-
             changeStat();
+            ////HERO
+            ////==================
+            //if (jenis == 1)
+            //{
+            //    temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
+            //}
+            ////==================
 
-            //HERO
-            //==================
-            if (jenis == 1)
-            {
-                temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
-            }
-            //==================
+            ////ANGEL
+            ////==================
+            //else if (jenis == 2)
+            //{
+            //    temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
+            //}
+            ////==================
 
-            //ANGEL
-            //==================
-            else if (jenis == 2)
-            {
-                temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
-            }
-            //==================
-
-            //BRAVE
-            //==================
-            else
-            {
-                temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
-            }
-            //==================
-
+            ////BRAVE
+            ////==================
+            //else
+            //{
+            //    temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
+            //}
+            ////==================
+            Image temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
             return temp;
         }
 
