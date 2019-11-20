@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CookieRun</RootNamespace>
     <AssemblyName>CookieRun</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cookies.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,18 +61,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -81,169 +83,242 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\Mobile - Cookie Run - Brave Cookie.png" />
+    <None Include="Images\Brave\Mobile - Cookie Run - Brave Cookie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile000.png" />
+    <None Include="Images\Brave\tile000.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile001.png" />
+    <None Include="Images\Brave\tile001.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile002.png" />
+    <None Include="Images\Brave\tile002.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile003.png" />
+    <None Include="Images\Brave\tile003.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile004.png" />
+    <None Include="Images\Brave\tile004.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile005.png" />
+    <None Include="Images\Brave\tile005.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile006.png" />
+    <None Include="Images\Brave\tile006.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile007.png" />
+    <None Include="Images\Brave\tile020.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile008.png" />
+    <None Include="Images\Brave\tile021.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile009.png" />
+    <None Include="Images\Brave\tile026.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile010.png" />
+    <None Include="Images\Brave\tile027.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile012.png" />
+    <None Include="Images\Brave\tile028.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile013.png" />
+    <None Include="Images\Brave\tile029.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile014.png" />
+    <None Include="Images\Brave\tile030.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile015.png" />
+    <None Include="Images\Brave\tile031.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile016.png" />
+    <None Include="Images\Brave\tile032.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile017.png" />
+    <None Include="Images\Brave\tile033.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile018.png" />
+    <None Include="Images\Brave\tile034.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile019.png" />
+    <None Include="Images\Brave\tile035.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile020.png" />
+    <None Include="Images\Brave\tile036.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile021.png" />
+    <None Include="Images\Brave\tile037.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile022.png" />
+    <None Include="Images\Brave\tile038.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile023.png" />
+    <None Include="Images\Brave\tile039.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile024.png" />
+    <None Include="Images\Brave\tile040.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile025.png" />
+    <None Include="Images\Brave\tile041.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile026.png" />
+    <None Include="Images\Brave\tile042.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile027.png" />
+    <None Include="Images\Brave\tile043.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile028.png" />
+    <None Include="Images\Brave\tile044.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile029.png" />
+    <None Include="Images\Brave\tile045.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile030.png" />
+    <None Include="Images\Brave\tile046.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile031.png" />
+    <None Include="Images\Brave\tile047.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile032.png" />
+    <None Include="Images\Brave\tile048.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile033.png" />
+    <None Include="Images\Brave\tile049.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile034.png" />
+    <None Include="Images\Brave\tile050.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile035.png" />
+    <None Include="Images\Brave\tile051.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile036.png" />
+    <None Include="Images\Brave\tile052.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile037.png" />
+    <None Include="Images\Brave\tile053.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile038.png" />
+    <None Include="Images\Brave\brave_run_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile039.png" />
+    <None Include="Images\Brave\brave_run_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile040.png" />
+    <None Include="Images\Brave\brave_run_3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile041.png" />
+    <None Include="Images\Brave\brave_run_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile042.png" />
+    <None Include="Images\Brave\brave_run_boost_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile043.png" />
+    <None Include="Images\Brave\brave_run_boost_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile044.png" />
+    <None Include="Images\Brave\brave_run_boost_3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile045.png" />
+    <None Include="Images\Brave\brave_run_boost_4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile046.png" />
+    <None Include="Images\Brave\brave_idle_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile047.png" />
+    <None Include="Images\Brave\brave_idle_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile048.png" />
+    <None Include="Images\Brave\brave_idle_3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile049.png" />
+    <None Include="Images\Brave\brave_idle_4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile050.png" />
+    <None Include="Images\Brave\brave_jump_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile051.png" />
+    <None Include="Images\Brave\brave_jump_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile052.png" />
+    <None Include="Images\Brave\brave_slide_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Brave\tile053.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Brave.txt" />
+    <None Include="Images\Brave\brave_slide_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
