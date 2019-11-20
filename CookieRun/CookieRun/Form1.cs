@@ -27,8 +27,6 @@ namespace CookieRun
         
 
 
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             picPlayer.BackColor = Color.Transparent;
