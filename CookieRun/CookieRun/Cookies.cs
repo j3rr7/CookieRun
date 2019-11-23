@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Resources;
+using System.Threading;
 
 namespace CookieRun
 {
@@ -13,8 +14,10 @@ namespace CookieRun
         int jenis; //0 = Brave | 1 = Hero | 2 = Angel | -ToDo add more dynamic feature
         int status; //0 = idle | 1 = running | 2 = jumping | 3 = sliding | 99 = runboosted -ToDo add more event and validation
 
-        string jenisCookie;
-        string statusCookie;
+        //filename constraint ==|
+        string jenisCookie; //==|
+        string statusCookie; //=|
+        //======================|
 
         public Cookies()
         {
@@ -27,30 +30,15 @@ namespace CookieRun
         public Image getAnimation(int counterAnimation)//parameter as counter for the animation sequences
         {
             changeStat();
-            ////HERO
-            ////==================
-            //if (jenis == 1)
-            //{
-            //    temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
-            //}
-            ////==================
-
-            ////ANGEL
-            ////==================
-            //else if (jenis == 2)
-            //{
-            //    temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
-            //}
-            ////==================
-
-            ////BRAVE
-            ////==================
-            //else
-            //{
-            //    temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
-            //}
-            ////==================
-            Image temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
+            Image temp;
+            try
+            {
+                temp = (Image)Properties.Resources.ResourceManager.GetObject(this.jenisCookie + "_" + this.statusCookie + "_" + counterAnimation.ToString());
+            }
+            catch (Exception)
+            {
+                temp = null;
+            }
             return temp;
         }
 
