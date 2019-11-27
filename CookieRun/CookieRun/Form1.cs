@@ -21,16 +21,19 @@ namespace CookieRun
 
         Cookies player = new Cookies();
 
-        const int ground_height = 290; //position ground   
-        const int jump_height = 50; //position top most
+        //JUMP INITIALIZATION
+        //==================
+        const int ground_height = 290;
+        const int jump_height = 100;
+        bool isMaxHeightJump = false;
+        bool isJumping = false;
+        //==================
+
 
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
         Image backgroundImg;
-
         bool isStarted = false;
-
-        bool isJumping = false;
 
 
         public Form1()
@@ -62,35 +65,6 @@ namespace CookieRun
             //=====================
         }
 
-        //Event validate every few Second
-        private void ValidationTimer_Tick(object sender, EventArgs e)
-        {
-            if (isJumping)
-            {
-                player.Status = 2;
-                if (picPlayer.Location.Y > ground_height - jump_height)
-                {
-                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 2);
-                }
-                else
-                {
-                    isJumping = false;
-                }
-            }
-            if (!isJumping)
-            {
-                if (picPlayer.Location.Y < ground_height)
-                {
-                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 2);
-                }
-                else
-                {
-                    player.Status = 1;
-                }
-            }
-            Invalidate();
-        }
-
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             g = e.Graphics;
@@ -118,9 +92,37 @@ namespace CookieRun
 
             //Draw hitbox Player
             //=====================
-            Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 60), new Size(50, 60));
-            g.DrawRectangle(new Pen(Color.Yellow, 2), r);
+            if (player.Status != 3)
+            {
+                Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 60), new Size(50, 60));
+                g.DrawRectangle(new Pen(Color.Red, 2), r);
+            }
+            else
+            {
+                Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 90), new Size(60, 30));
+                g.DrawRectangle(new Pen(Color.Red, 2), r);
+            }
             //=====================
+        }
+
+        private void gerakBackground_Tick(object sender, EventArgs e)
+        {
+            //Gerak Background
+            for (int i = 0; i < 2; i++)
+            {
+                posisiBackground[i] -= 5; //atur kecepataan player
+                if (posisiBackground[i] <= -800)
+                {
+                    posisiBackground[i] += (800 * 2) - 4; //kirim gambar habis ke kanan
+                }
+            }
+        }
+
+        //Event validate every few Second
+        private void ValidationTimer_Tick(object sender, EventArgs e)
+        {
+            CekJump();
+            Invalidate();
         }
 
         //Timer for cooldown as same as player wont move until cooldown is over
@@ -159,26 +161,40 @@ namespace CookieRun
         }
         //=====================
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
 
-            if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up)
+//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//      [  J U M P  ]
+        private void CekJump()
+        {
+            if (isJumping)
             {
-                //MessageBox.Show("Test");
-                //this will confuse you :V but all this do is change isJumping to True
-                if (!isJumping)
+                player.Status = 2; //jump
+                if (!isMaxHeightJump)
                 {
-                    isJumping = !isJumping;
+                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 2);
+                    if (picPlayer.Location.Y < (ground_height - jump_height))
+                    {
+                        isMaxHeightJump = !isMaxHeightJump;
+                    }
+                }
+                else
+                {
+                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 2);
+                    if (picPlayer.Location.Y >= ground_height)
+                    {
+                        isMaxHeightJump = !isMaxHeightJump;
+                        player.Status = 1;
+                        isJumping = false;
+                    }
                 }
             }
         }
+//      [  J U M P  ]
+//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
-        {
 
-        }
 
-        //Panel Start Game
+//[  E V E N T  ] GAME
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             isStarted = !isStarted;
@@ -187,17 +203,32 @@ namespace CookieRun
             MainMenuPanel.Dispose();
         }
 
-        private void gerakBackground_Tick(object sender, EventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //Gerak Background
-            for (int i = 0; i < 2; i++)
+            if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up)
             {
-                posisiBackground[i] -= 5; //atur kecepataan player
-                if (posisiBackground[i] <= -800)
+                if (!isJumping)
                 {
-                    posisiBackground[i] += (800 * 2) - 4; //kirim gambar habis ke kanan
+                    isJumping = true;
                 }
             }
+            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
+            {
+                if (!isJumping)
+                {
+                    player.Status = 3;
+                }
+            }
+
         }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
+            {
+                player.Status = 1;
+            }
+        }
+
     }
 }

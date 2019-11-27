@@ -91,8 +91,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 443);
-            this.Controls.Add(this.picPlayer);
             this.Controls.Add(this.MainMenuPanel);
+            this.Controls.Add(this.picPlayer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
