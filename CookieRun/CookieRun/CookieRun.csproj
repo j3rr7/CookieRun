@@ -337,5 +337,23 @@
   <ItemGroup>
     <None Include="Images\background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_run_boost_1 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_run_boost_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_run_boost_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_run_boost_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_slide_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_slide_2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

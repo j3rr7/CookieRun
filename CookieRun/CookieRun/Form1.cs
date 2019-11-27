@@ -219,7 +219,17 @@ namespace CookieRun
                     player.Status = 3;
                 }
             }
-
+            if (e.KeyCode == Keys.P)
+            {
+                if (player.Jenis == 0)
+                {
+                    player.Jenis = 1;
+                }
+                else if (player.Jenis == 1)
+                {
+                    player.Jenis = 0;
+                }
+            }
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)

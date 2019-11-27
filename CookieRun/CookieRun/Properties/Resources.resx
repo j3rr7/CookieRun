@@ -181,4 +181,22 @@
   <data name="hero_run_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Hero\hero_run_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hero_run_boost_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_run_boost_1 .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_run_boost_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_run_boost_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_run_boost_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_run_boost_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_run_boost_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_run_boost_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_slide_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_slide_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_slide_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_slide_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
