@@ -59,7 +59,6 @@ namespace CookieRun
             //Background
             //=====================
             backgroundImg = CookieRun.Properties.Resources.background;
-                //posisi
             posisiBackground.Add(1);    //posisi background kiri x
             posisiBackground.Add(800);  //posisi background kanan x
             //=====================
@@ -194,7 +193,8 @@ namespace CookieRun
 
 
 
-//[  E V E N T  ] GAME
+//[  K E Y  E V E N T  ] GAME
+//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             isStarted = !isStarted;
@@ -229,6 +229,11 @@ namespace CookieRun
                 player.Status = 1;
             }
         }
+
+//[  K E Y  E V E N T  ] GAME
+//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 
     }
 }
