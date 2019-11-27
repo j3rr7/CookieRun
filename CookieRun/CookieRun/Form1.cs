@@ -21,13 +21,17 @@ namespace CookieRun
 
         Cookies player = new Cookies();
 
-        const int ground_height = 316; //position ground   
+        const int ground_height = 290; //position ground   
+        const int jump_height = 50; //position top most
 
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
         Image backgroundImg;
 
         bool isStarted = false;
+
+        bool isJumping = false;
+
 
         public Form1()
         {
@@ -61,6 +65,29 @@ namespace CookieRun
         //Event validate every few Second
         private void ValidationTimer_Tick(object sender, EventArgs e)
         {
+            if (isJumping)
+            {
+                player.Status = 2;
+                if (picPlayer.Location.Y > ground_height - jump_height)
+                {
+                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 2);
+                }
+                else
+                {
+                    isJumping = false;
+                }
+            }
+            if (!isJumping)
+            {
+                if (picPlayer.Location.Y < ground_height)
+                {
+                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 2);
+                }
+                else
+                {
+                    player.Status = 1;
+                }
+            }
             Invalidate();
         }
 
@@ -74,7 +101,7 @@ namespace CookieRun
             {
                 for (int i = 0; i < posisiBackground.Count; i++)
                 {
-                    g.DrawImage(backgroundImg, posisiBackground[i], 0, 800, 450); // gambar , x , y , w , h
+                    g.DrawImage(backgroundImg, posisiBackground[i], 0, 800, 450); // gambar , x , y , w , h 800 450
                 }
             }
             //=====================
@@ -134,10 +161,15 @@ namespace CookieRun
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //MOVE PICTURE BOX
+
             if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up)
             {
-                MessageBox.Show("Test");
+                //MessageBox.Show("Test");
+                //this will confuse you :V but all this do is change isJumping to True
+                if (!isJumping)
+                {
+                    isJumping = !isJumping;
+                }
             }
         }
 
@@ -161,7 +193,7 @@ namespace CookieRun
             for (int i = 0; i < 2; i++)
             {
                 posisiBackground[i] -= 5; //atur kecepataan player
-                if (posisiBackground[i] <= -790)
+                if (posisiBackground[i] <= -800)
                 {
                     posisiBackground[i] += (800 * 2) - 4; //kirim gambar habis ke kanan
                 }
