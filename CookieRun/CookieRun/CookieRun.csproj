@@ -355,5 +355,11 @@
   <ItemGroup>
     <None Include="Images\Hero\hero_slide_2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\Bgm_spring_event_ep01.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\SoundBgm_Lobby_epN01.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

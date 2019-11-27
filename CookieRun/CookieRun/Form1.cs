@@ -36,6 +36,9 @@ namespace CookieRun
         bool isStarted = false;
 
 
+        //SOUND AND MUSIC
+        System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
+        System.Media.SoundPlayer bg_music;
         public Form1()
         {
             InitializeComponent();
@@ -62,6 +65,8 @@ namespace CookieRun
             posisiBackground.Add(1);    //posisi background kiri x
             posisiBackground.Add(800);  //posisi background kanan x
             //=====================
+
+            mm_music.PlayLooping();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -198,6 +203,10 @@ namespace CookieRun
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             isStarted = !isStarted;
+
+            mm_music.Stop();
+            bg_music.PlayLooping();
+
             this.CooldownTimer.Start();
             this.GerakPlayerTimer.Start();
             MainMenuPanel.Dispose();

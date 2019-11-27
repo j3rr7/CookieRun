@@ -71,6 +71,15 @@ namespace CookieRun.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Bgm_spring_event_ep01 {
+            get {
+                return ResourceManager.GetStream("Bgm_spring_event_ep01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap brave_idle_1 {
@@ -327,6 +336,15 @@ namespace CookieRun.Properties {
             get {
                 object obj = ResourceManager.GetObject("hero_slide_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream SoundBgm_Lobby_epN01 {
+            get {
+                return ResourceManager.GetStream("SoundBgm_Lobby_epN01", resourceCulture);
             }
         }
     }
