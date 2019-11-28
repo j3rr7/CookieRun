@@ -36,6 +36,22 @@ namespace CookieRun
             writer.Close();
         }
 
+        private void SaveHighScore()
+        {
+            XmlTextWriter writer = new XmlTextWriter("highscore.xml", Encoding.UTF8);
+            writer.Formatting = Formatting.Indented;
+            writer.WriteStartElement("root");
+            for (int i = 0; i < user.Highscore.Length; i++)
+            {
+                writer.WriteStartElement("list");
+                writer.WriteElementString("nama", user.NamaPlayer[i]);
+                writer.WriteElementString("skor", user.Highscore[i].ToString());
+                writer.WriteEndElement();
+            }
+            writer.WriteEndElement();
+            writer.Close();
+        }
+
         private void Load()
         {
             if(File.Exists("player.xml"))
@@ -75,6 +91,37 @@ namespace CookieRun
             {
                 
             }   
+        }
+
+        private void LoadHighScore()
+        {
+            if(File.Exists("highscore.xml"))
+            {
+                try
+                {
+                    XmlTextReader reader = new XmlTextReader("player.xml");
+                    reader.ReadStartElement("root");
+                    int ctr = 0;
+                    while (reader.IsStartElement("list"))
+                    {
+                        reader.ReadStartElement("list");
+                        user.Highscore[ctr] = Convert.ToInt32(reader.ReadElementString("skor"));
+                        user.NamaPlayer[ctr] = reader.ReadElementString("nama");
+                        reader.ReadEndElement();
+                        ctr++;
+                    }
+                    reader.ReadEndElement();
+                    reader.Close();
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            else
+            {
+
+            }
         }
     }
 }

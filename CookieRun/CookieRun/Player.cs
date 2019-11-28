@@ -8,16 +8,14 @@ namespace CookieRun
 {
     class Player
     {
-        int highscore;
-        string namaPlayer;
+        int []highscore;
+        string []namaPlayer;
         int coin;
         string []cookie;
         string []pet;
 
         public Player()
         {
-            this.highscore = 0;
-            this.namaPlayer = "";
             this.Coin = 0;
         }
 
@@ -25,10 +23,12 @@ namespace CookieRun
         public int Coin { get => coin; set => coin = value; }
         public string[] Cookie { get => cookie; set => cookie = value; }
         public string[] Pet { get => pet; set => pet = value; }
+        public int[] Highscore { get => highscore; set => highscore = value; }
+        public string[] NamaPlayer { get => namaPlayer; set => namaPlayer = value; }
 
         public override string ToString()
         {
-            return namaPlayer + " - " + highscore;
+            return NamaPlayer + " - " + Highscore;
         }
     }
 }
