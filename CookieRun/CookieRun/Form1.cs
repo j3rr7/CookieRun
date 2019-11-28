@@ -183,7 +183,7 @@ namespace CookieRun
                 }
                 else
                 {
-                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 2);
+                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 3);
                     if (picPlayer.Location.Y >= ground_height)
                     {
                         isMaxHeightJump = !isMaxHeightJump;
@@ -205,7 +205,7 @@ namespace CookieRun
             isStarted = !isStarted;
 
             mm_music.Stop();
-            bg_music.PlayLooping();
+            //bg_music.PlayLooping();
 
             this.CooldownTimer.Start();
             this.GerakPlayerTimer.Start();
