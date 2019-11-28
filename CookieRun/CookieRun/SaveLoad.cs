@@ -99,7 +99,7 @@ namespace CookieRun
             {
                 try
                 {
-                    XmlTextReader reader = new XmlTextReader("highscore.xml");
+                    XmlTextReader reader = new XmlTextReader("player.xml");
                     reader.ReadStartElement("root");
                     int ctr = 0;
                     while (reader.IsStartElement("list"))
