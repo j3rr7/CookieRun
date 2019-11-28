@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace CookieRun
 {
@@ -37,8 +38,8 @@ namespace CookieRun
 
 
         //SOUND AND MUSIC
-        System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
-        System.Media.SoundPlayer bg_music;
+        SoundPlayer mm_music = new SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
+        SoundPlayer bg_music;
         public Form1()
         {
             InitializeComponent();
