@@ -364,5 +364,11 @@
   <ItemGroup>
     <None Include="Images\bgawal.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\bgMusic.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sound\jump.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
