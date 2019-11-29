@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using System.Media;
 
 namespace CookieRun
 {
@@ -34,12 +33,13 @@ namespace CookieRun
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
         Image backgroundImg;
+        Image backgroundImg2;
         bool isStarted = false;
 
 
         //SOUND AND MUSIC
-        SoundPlayer mm_music = new SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
-        SoundPlayer bg_music;
+        System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
+        System.Media.SoundPlayer bg_music;
         public Form1()
         {
             InitializeComponent();
@@ -65,6 +65,7 @@ namespace CookieRun
             backgroundImg = CookieRun.Properties.Resources.background;
             posisiBackground.Add(1);    //posisi background kiri x
             posisiBackground.Add(800);  //posisi background kanan x
+            
             //=====================
 
             mm_music.PlayLooping();
@@ -81,6 +82,7 @@ namespace CookieRun
                 for (int i = 0; i < posisiBackground.Count; i++)
                 {
                     g.DrawImage(backgroundImg, posisiBackground[i], 0, 800, 450); // gambar , x , y , w , h 800 450
+                   
                 }
             }
             //=====================
@@ -152,6 +154,7 @@ namespace CookieRun
         {
             //IF the return Image is valid assign it to parent if not counter back to 1 (assumed every player animation name start with 1)
             //--------------------
+           
             if (player.getAnimation(counter_gerak) != null)
             {
                 this.picPlayer.Image = player.getAnimation(counter_gerak);
@@ -161,7 +164,7 @@ namespace CookieRun
             {
                 counter_gerak = 1;
             }
-            //--------------------
+            //-------------------- delay
             Thread.Sleep(10);
         }
         //=====================
@@ -171,23 +174,23 @@ namespace CookieRun
 //      [  J U M P  ]
         private void CekJump()
         {
-            if (isJumping)
+            if (isJumping==true)
             {
                 player.Status = 2; //jump
-                if (!isMaxHeightJump)
+                if (isMaxHeightJump==false)
                 {
                     picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 2);
                     if (picPlayer.Location.Y < (ground_height - jump_height))
                     {
-                        isMaxHeightJump = !isMaxHeightJump;
+                        isMaxHeightJump =true;
                     }
                 }
                 else
                 {
-                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 3);
+                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 2);
                     if (picPlayer.Location.Y >= ground_height)
                     {
-                        isMaxHeightJump = !isMaxHeightJump;
+                        isMaxHeightJump = false;
                         player.Status = 1;
                         isJumping = false;
                     }
@@ -206,7 +209,7 @@ namespace CookieRun
             isStarted = !isStarted;
 
             mm_music.Stop();
-            //bg_music.PlayLooping();
+            bg_music.PlayLooping();
 
             this.CooldownTimer.Start();
             this.GerakPlayerTimer.Start();
@@ -215,16 +218,17 @@ namespace CookieRun
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up)
             {
-                if (!isJumping)
+                if (isJumping==false)
                 {
                     isJumping = true;
                 }
             }
             if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
             {
-                if (!isJumping)
+                if (isJumping == false)
                 {
                     player.Status = 3;
                 }
@@ -250,8 +254,18 @@ namespace CookieRun
             }
         }
 
-//[  K E Y  E V E N T  ] GAME
-//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ini Shop");
+        }
+
+        //[  K E Y  E V E N T  ] GAME
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 

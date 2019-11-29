@@ -36,6 +36,8 @@
             this.MainMenuPanel = new System.Windows.Forms.Panel();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.gerakBackground = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             this.MainMenuPanel.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +67,9 @@
             // 
             // MainMenuPanel
             // 
+            this.MainMenuPanel.BackgroundImage = global::CookieRun.Properties.Resources.bgawal;
+            this.MainMenuPanel.Controls.Add(this.button2);
+            this.MainMenuPanel.Controls.Add(this.button1);
             this.MainMenuPanel.Controls.Add(this.buttonPlay);
             this.MainMenuPanel.Location = new System.Drawing.Point(12, 12);
             this.MainMenuPanel.Name = "MainMenuPanel";
@@ -73,18 +78,47 @@
             // 
             // buttonPlay
             // 
-            this.buttonPlay.Location = new System.Drawing.Point(694, 387);
+            this.buttonPlay.BackColor = System.Drawing.Color.Maroon;
+            this.buttonPlay.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPlay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonPlay.Location = new System.Drawing.Point(314, 81);
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlay.Size = new System.Drawing.Size(155, 74);
             this.buttonPlay.TabIndex = 0;
             this.buttonPlay.Text = "Play";
-            this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.UseVisualStyleBackColor = false;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
             // gerakBackground
             // 
             this.gerakBackground.Interval = 30;
             this.gerakBackground.Tick += new System.EventHandler(this.gerakBackground_Tick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Maroon;
+            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(311, 175);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(155, 74);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Shop";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Maroon;
+            this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(311, 267);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(155, 74);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -117,6 +151,8 @@
         private System.Windows.Forms.Panel MainMenuPanel;
         private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.Timer gerakBackground;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
