@@ -26,6 +26,7 @@ namespace CookieRun
         const int ground_height = 290;
         const int jump_height = 100;
         bool isMaxHeightJump = false;
+        int J_Jump = 2;
         bool isJumping = false;
         //==================
 
@@ -33,13 +34,13 @@ namespace CookieRun
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
         Image backgroundImg;
-        Image backgroundImg2;
+        //Image backgroundImg2;
         bool isStarted = false;
 
 
         //SOUND AND MUSIC
         System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
-        System.Media.SoundPlayer bg_music;
+        System.Media.SoundPlayer bg_music = new System.Media.SoundPlayer(Properties.Resources.bgMusic);
         public Form1()
         {
             InitializeComponent();
@@ -62,7 +63,7 @@ namespace CookieRun
 
             //Background
             //=====================
-            backgroundImg = CookieRun.Properties.Resources.background;
+            backgroundImg = Properties.Resources.background;
             posisiBackground.Add(1);    //posisi background kiri x
             posisiBackground.Add(800);  //posisi background kanan x
             
@@ -97,19 +98,19 @@ namespace CookieRun
             }
             //=====================
 
-            //Draw hitbox Player
-            //=====================
-            if (player.Status != 3)
-            {
-                Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 60), new Size(50, 60));
-                g.DrawRectangle(new Pen(Color.Red, 2), r);
-            }
-            else
-            {
-                Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 90), new Size(60, 30));
-                g.DrawRectangle(new Pen(Color.Red, 2), r);
-            }
-            //=====================
+            ////Draw hitbox Player
+            ////=====================
+            //if (player.Status != 3)
+            //{
+            //    Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 60), new Size(50, 60));
+            //    g.DrawRectangle(new Pen(Color.Red, 2), r);
+            //}
+            //else
+            //{
+            //    Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 90), new Size(60, 30));
+            //    g.DrawRectangle(new Pen(Color.Red, 2), r);
+            //}
+            ////=====================
         }
 
         private void gerakBackground_Tick(object sender, EventArgs e)
@@ -152,9 +153,15 @@ namespace CookieRun
         int counter_gerak = 1;
         private void GerakPlayerTimer_Tick(object sender, EventArgs e)
         {
+            doAnimationLooping();
+            //-------------------- delay
+            Thread.Sleep(10);
+        }
+        //=====================
+        private void doAnimationLooping()
+        {
             //IF the return Image is valid assign it to parent if not counter back to 1 (assumed every player animation name start with 1)
             //--------------------
-           
             if (player.getAnimation(counter_gerak) != null)
             {
                 this.picPlayer.Image = player.getAnimation(counter_gerak);
@@ -164,37 +171,74 @@ namespace CookieRun
             {
                 counter_gerak = 1;
             }
-            //-------------------- delay
-            Thread.Sleep(10);
         }
-        //=====================
+        int counterOneTime = 1;
+        private void doAnimationOnetime()
+        {
+            bool done = false;
+            if (!done)
+            {
+                if (player.getAnimation(counterOneTime) != null)
+                {
+                    this.picPlayer.Image = player.getAnimation(counterOneTime);
+                    counterOneTime += 1;
+                }
+                else
+                {
+                    done = true;
+                }
+            }
+            if (done)
+            {
+                counterOneTime = 1;
+            }
+        }
 
 
-//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//      [  J U M P  ]
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        //      [  J U M P  ]
         private void CekJump()
         {
             if (isJumping==true)
             {
                 player.Status = 2; //jump
-                if (isMaxHeightJump==false)
+                if (isMaxHeightJump == false)
                 {
-                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 2);
-                    if (picPlayer.Location.Y < (ground_height - jump_height))
-                    {
-                        isMaxHeightJump =true;
-                    }
+                    GoUp();
                 }
                 else
                 {
-                    picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 2);
-                    if (picPlayer.Location.Y >= ground_height)
-                    {
-                        isMaxHeightJump = false;
-                        player.Status = 1;
-                        isJumping = false;
-                    }
+                    GoDown();
                 }
+            }
+        }
+        private void GoUp()
+        {
+            if (J_Jump == 1)
+            {
+                picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 4);
+                if (picPlayer.Location.Y < (ground_height - jump_height))
+                {
+                    isMaxHeightJump = true;
+                }
+            }
+            else if (J_Jump == 0)
+            {
+                picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 4);
+                if (picPlayer.Location.Y < (ground_height - (jump_height * 2) ))
+                {
+                    isMaxHeightJump = true;
+                }
+            }
+        }
+        private void GoDown()
+        {
+            picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 4);
+            if (picPlayer.Location.Y >= ground_height)
+            {
+                isMaxHeightJump = false;
+                player.Status = 1;
+                isJumping = false;
             }
         }
 //      [  J U M P  ]
@@ -202,8 +246,8 @@ namespace CookieRun
 
 
 
-//[  K E Y  E V E N T  ] GAME
-//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        //[  K E Y  E V E N T  ] GAME
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             isStarted = !isStarted;
@@ -218,14 +262,21 @@ namespace CookieRun
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-
-            if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up)
+            //untuk lompat
+            if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
-                if (isJumping==false)
+                if (isJumping)
+                {
+                    J_Jump = 0;
+                }
+                if (!isJumping)
                 {
                     isJumping = true;
+                    J_Jump = 1;
                 }
             }
+
+            //untuk slide
             if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
             {
                 if (isJumping == false)
@@ -233,6 +284,8 @@ namespace CookieRun
                     player.Status = 3;
                 }
             }
+
+            //ganti player
             if (e.KeyCode == Keys.P)
             {
                 if (player.Jenis == 0)
@@ -256,7 +309,7 @@ namespace CookieRun
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void button1_Click(object sender, EventArgs e)
