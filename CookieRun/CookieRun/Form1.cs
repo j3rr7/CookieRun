@@ -30,6 +30,8 @@ namespace CookieRun
         bool isJumping = false;
         //==================
 
+        List<Graphics> listCoin = new List<Graphics>();
+
 
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
@@ -111,6 +113,9 @@ namespace CookieRun
             //    g.DrawRectangle(new Pen(Color.Red, 2), r);
             //}
             ////=====================
+            ///
+
+            
         }
 
         private void gerakBackground_Tick(object sender, EventArgs e)
@@ -233,7 +238,7 @@ namespace CookieRun
         }
         private void GoDown()
         {
-            picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 4);
+            picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y + 5);
             if (picPlayer.Location.Y >= ground_height)
             {
                 isMaxHeightJump = false;
@@ -246,8 +251,8 @@ namespace CookieRun
 
 
 
-        //[  K E Y  E V E N T  ] GAME
-        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//[  K E Y  E V E N T  ] GAME
+//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             isStarted = !isStarted;
@@ -317,8 +322,8 @@ namespace CookieRun
             MessageBox.Show("Ini Shop");
         }
 
-        //[  K E Y  E V E N T  ] GAME
-        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//[  K E Y  E V E N T  ] GAME
+//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 
