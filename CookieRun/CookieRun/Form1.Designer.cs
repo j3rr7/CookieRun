@@ -32,14 +32,15 @@
             this.ValidationTimer = new System.Windows.Forms.Timer(this.components);
             this.CooldownTimer = new System.Windows.Forms.Timer(this.components);
             this.GerakPlayerTimer = new System.Windows.Forms.Timer(this.components);
-            this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.gerakBackground = new System.Windows.Forms.Timer(this.components);
             this.MainMenuPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.gerakBackground = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+            this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.timerKoin = new System.Windows.Forms.Timer(this.components);
             this.MainMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // ValidationTimer
@@ -56,14 +57,10 @@
             // 
             this.GerakPlayerTimer.Tick += new System.EventHandler(this.GerakPlayerTimer_Tick);
             // 
-            // picPlayer
+            // gerakBackground
             // 
-            this.picPlayer.Location = new System.Drawing.Point(76, 290);
-            this.picPlayer.Name = "picPlayer";
-            this.picPlayer.Size = new System.Drawing.Size(120, 120);
-            this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPlayer.TabIndex = 0;
-            this.picPlayer.TabStop = false;
+            this.gerakBackground.Interval = 30;
+            this.gerakBackground.Tick += new System.EventHandler(this.gerakBackground_Tick);
             // 
             // MainMenuPanel
             // 
@@ -71,9 +68,9 @@
             this.MainMenuPanel.Controls.Add(this.button2);
             this.MainMenuPanel.Controls.Add(this.button1);
             this.MainMenuPanel.Controls.Add(this.buttonPlay);
-            this.MainMenuPanel.Location = new System.Drawing.Point(12, 12);
+            this.MainMenuPanel.Location = new System.Drawing.Point(3, 12);
             this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(776, 425);
+            this.MainMenuPanel.Size = new System.Drawing.Size(785, 425);
             this.MainMenuPanel.TabIndex = 1;
             // 
             // button2
@@ -81,7 +78,7 @@
             this.button2.BackColor = System.Drawing.Color.Maroon;
             this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(311, 267);
+            this.button2.Location = new System.Drawing.Point(311, 279);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 74);
             this.button2.TabIndex = 2;
@@ -115,10 +112,19 @@
             this.buttonPlay.UseVisualStyleBackColor = false;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
-            // gerakBackground
+            // picPlayer
             // 
-            this.gerakBackground.Interval = 30;
-            this.gerakBackground.Tick += new System.EventHandler(this.gerakBackground_Tick);
+            this.picPlayer.Location = new System.Drawing.Point(65, 210);
+            this.picPlayer.Name = "picPlayer";
+            this.picPlayer.Size = new System.Drawing.Size(200, 200);
+            this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPlayer.TabIndex = 0;
+            this.picPlayer.TabStop = false;
+            // 
+            // timerKoin
+            // 
+            this.timerKoin.Interval = 1000;
+            this.timerKoin.Tick += new System.EventHandler(this.TimerKoin_Tick);
             // 
             // Form1
             // 
@@ -136,8 +142,8 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             this.MainMenuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,6 +159,7 @@
         private System.Windows.Forms.Timer gerakBackground;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timerKoin;
     }
 }
 

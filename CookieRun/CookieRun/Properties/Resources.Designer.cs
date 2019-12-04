@@ -261,6 +261,16 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap goldCoin {
+            get {
+                object obj = ResourceManager.GetObject("goldCoin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hero_run_1 {
             get {
                 object obj = ResourceManager.GetObject("hero_run_1", resourceCulture);
@@ -364,6 +374,36 @@ namespace CookieRun.Properties {
         internal static System.IO.UnmanagedMemoryStream jump {
             get {
                 return ResourceManager.GetStream("jump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Large_Health_Potion {
+            get {
+                object obj = ResourceManager.GetObject("Large_Health_Potion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silverCoin {
+            get {
+                object obj = ResourceManager.GetObject("silverCoin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Small_Health_Potion {
+            get {
+                object obj = ResourceManager.GetObject("Small_Health_Potion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

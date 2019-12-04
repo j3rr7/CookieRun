@@ -157,3 +157,51 @@ E:\Kuliah\Semester 3\Pemrograman Visual\PROYEK COOKIE RUN\CookieRun\CookieRun\ob
 E:\Kuliah\Semester 3\Pemrograman Visual\PROYEK COOKIE RUN\CookieRun\CookieRun\obj\Debug\CookieRun.csproj.GenerateResource.cache
 E:\Kuliah\Semester 3\Pemrograman Visual\PROYEK COOKIE RUN\CookieRun\CookieRun\obj\Debug\CookieRun.exe
 E:\Kuliah\Semester 3\Pemrograman Visual\PROYEK COOKIE RUN\CookieRun\CookieRun\obj\Debug\CookieRun.pdb
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\Mobile - Cookie Run - Brave Cookie.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile000.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile001.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile002.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile003.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile004.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile005.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile006.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile020.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile021.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile026.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile027.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile028.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile029.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile030.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile031.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile032.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile033.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile034.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile035.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile036.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile037.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile038.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile039.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile040.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile041.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile042.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile043.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile044.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile045.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile046.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile047.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile048.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile049.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile050.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile051.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile052.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\Images\Brave\tile053.png
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\CookieRun.exe.config
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\CookieRun.exe
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\bin\Debug\CookieRun.pdb
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\obj\Debug\CookieRun.csprojAssemblyReference.cache
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\obj\Debug\CookieRun.Form1.resources
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\obj\Debug\CookieRun.Properties.Resources.resources
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\obj\Debug\CookieRun.csproj.GenerateResource.cache
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\obj\Debug\CookieRun.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\obj\Debug\CookieRun.exe
+C:\Users\User\Desktop\SEM 3\PV\proyek\CookieRun\CookieRun\CookieRun\obj\Debug\CookieRun.pdb

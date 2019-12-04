@@ -30,7 +30,8 @@ namespace CookieRun
         bool isJumping = false;
         //==================
 
-        List<Graphics> listCoin = new List<Graphics>();
+       
+
 
 
         //BACKGROUND
@@ -43,6 +44,9 @@ namespace CookieRun
         //SOUND AND MUSIC
         System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
         System.Media.SoundPlayer bg_music = new System.Media.SoundPlayer(Properties.Resources.bgMusic);
+
+        //COIN
+        List<Coin> c = new List<Coin>();
         public Form1()
         {
             InitializeComponent();
@@ -54,7 +58,8 @@ namespace CookieRun
             MainMenuPanel.Visible = true;
 
             picPlayer.BackColor = Color.Transparent;    // <- set color to transparent
-
+            //picKoin.BackColor = Color.Transparent;
+            
             //Constraint interval player gerak
             this.GerakPlayerTimer.Interval = this.refreshTickPlayer;
 
@@ -87,6 +92,7 @@ namespace CookieRun
                     g.DrawImage(backgroundImg, posisiBackground[i], 0, 800, 450); // gambar , x , y , w , h 800 450
                    
                 }
+                cetakKoin(g);
             }
             //=====================
 
@@ -120,6 +126,7 @@ namespace CookieRun
 
         private void gerakBackground_Tick(object sender, EventArgs e)
         {
+          
             //Gerak Background
             for (int i = 0; i < 2; i++)
             {
@@ -149,6 +156,7 @@ namespace CookieRun
             {
                 player.Status = 1; // Change Player status
                 this.gerakBackground.Start();//Start gerak background setelah cooldown selesai
+                this.timerKoin.Start();
                 this.CooldownTimer.Stop();
             }
         }
@@ -165,6 +173,7 @@ namespace CookieRun
         //=====================
         private void doAnimationLooping()
         {
+            
             //IF the return Image is valid assign it to parent if not counter back to 1 (assumed every player animation name start with 1)
             //--------------------
             if (player.getAnimation(counter_gerak) != null)
@@ -246,13 +255,40 @@ namespace CookieRun
                 isJumping = false;
             }
         }
-//      [  J U M P  ]
-//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        public void spawnKoin()
+        {
+            Random r = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                int ran = r.Next(2);
+                if (ran == 0)
+                {
+                    c.Add(new CoinBesar(150, 350));
+                }
+                else if (ran == 1)
+                {
+                    c.Add(new CoinKecil(150, 350));
+
+                }
+            }
+           
+        }
+
+        public void cetakKoin(Graphics g)
+        {
+            for (int a = 0; a < c.Count; a++)
+            {
+                Image ip = c[a].drawCoin();
+                g.DrawImage(ip, c[a].x+a*50, c[a].y, c[a].w , c[a].h);
+            }
+        }
+        //      [  J U M P  ]
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 
-//[  K E Y  E V E N T  ] GAME
-//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        //[  K E Y  E V E N T  ] GAME
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         private void buttonPlay_Click(object sender, EventArgs e)
         {
             isStarted = !isStarted;
@@ -322,8 +358,13 @@ namespace CookieRun
             MessageBox.Show("Ini Shop");
         }
 
-//[  K E Y  E V E N T  ] GAME
-//--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        private void TimerKoin_Tick(object sender, EventArgs e)
+        {
+            spawnKoin();
+        }
+
+        //[  K E Y  E V E N T  ] GAME
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
 
