@@ -68,7 +68,7 @@
             this.MainMenuPanel.Controls.Add(this.button2);
             this.MainMenuPanel.Controls.Add(this.button1);
             this.MainMenuPanel.Controls.Add(this.buttonPlay);
-            this.MainMenuPanel.Location = new System.Drawing.Point(3, 12);
+            this.MainMenuPanel.Location = new System.Drawing.Point(4, 4);
             this.MainMenuPanel.Name = "MainMenuPanel";
             this.MainMenuPanel.Size = new System.Drawing.Size(785, 425);
             this.MainMenuPanel.TabIndex = 1;
@@ -114,9 +114,9 @@
             // 
             // picPlayer
             // 
-            this.picPlayer.Location = new System.Drawing.Point(65, 210);
+            this.picPlayer.Location = new System.Drawing.Point(50, 295);
             this.picPlayer.Name = "picPlayer";
-            this.picPlayer.Size = new System.Drawing.Size(200, 200);
+            this.picPlayer.Size = new System.Drawing.Size(120, 120);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 443);
+            this.ClientSize = new System.Drawing.Size(801, 447);
             this.Controls.Add(this.MainMenuPanel);
             this.Controls.Add(this.picPlayer);
             this.DoubleBuffered = true;

@@ -30,16 +30,11 @@ namespace CookieRun
         bool isJumping = false;
         //==================
 
-       
-
-
-
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
         Image backgroundImg;
         //Image backgroundImg2;
         bool isStarted = false;
-
 
         //SOUND AND MUSIC
         System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
@@ -90,9 +85,14 @@ namespace CookieRun
                 for (int i = 0; i < posisiBackground.Count; i++)
                 {
                     g.DrawImage(backgroundImg, posisiBackground[i], 0, 800, 450); // gambar , x , y , w , h 800 450
-                   
                 }
-                cetakKoin(g);
+                for (int a = 0; a < c.Count; a++)
+                {
+                    if (c[a].x < 300)
+                    {
+                        g.DrawImage(c[a].drawCoin(), c[a].x + a * 50, c[a].y, c[a].w, c[a].h);
+                    }
+                }
             }
             //=====================
 
@@ -126,7 +126,6 @@ namespace CookieRun
 
         private void gerakBackground_Tick(object sender, EventArgs e)
         {
-          
             //Gerak Background
             for (int i = 0; i < 2; i++)
             {
@@ -255,6 +254,8 @@ namespace CookieRun
                 isJumping = false;
             }
         }
+        //      [  J U M P  ]
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         public void spawnKoin()
         {
             Random r = new Random();
@@ -268,24 +269,10 @@ namespace CookieRun
                 else if (ran == 1)
                 {
                     c.Add(new CoinKecil(150, 350));
-
                 }
             }
            
         }
-
-        public void cetakKoin(Graphics g)
-        {
-            for (int a = 0; a < c.Count; a++)
-            {
-                Image ip = c[a].drawCoin();
-                g.DrawImage(ip, c[a].x+a*50, c[a].y, c[a].w , c[a].h);
-            }
-        }
-        //      [  J U M P  ]
-        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
 
         //[  K E Y  E V E N T  ] GAME
         //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
