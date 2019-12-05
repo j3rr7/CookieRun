@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+
 namespace CookieRun
 {
     public partial class Form1 : Form
@@ -29,6 +30,7 @@ namespace CookieRun
         int J_Jump = 2;
         bool isJumping = false;
         //==================
+
         //SHOP COOKIE
         List<shop> gambarIdleShop = new List<shop>();
         List<int> locInfo = new List<int>();
@@ -39,14 +41,16 @@ namespace CookieRun
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
         Image backgroundImg;
-        Image backgroundImg2;
         bool isStarted = false;
 
         Player play = new Player();
 
         //SOUND AND MUSIC
-        System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
-        System.Media.SoundPlayer bg_music = new System.Media.SoundPlayer(Properties.Resources.Bgm_spring_event_ep01);
+        SoundPlayer mm_music = new SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
+        SoundPlayer bg_music = new SoundPlayer(Properties.Resources.bgMusic);
+
+        List<Coin> c = new List<Coin>();
+
         public Form1()
         {
             InitializeComponent();
@@ -313,7 +317,8 @@ namespace CookieRun
             isStarted = !isStarted;
 
             mm_music.Stop();
-            bg_music.PlayLooping(); //error
+            mm_music.Dispose();
+            bg_music.PlayLooping(); 
 
             this.CooldownTimer.Start();
             this.GerakPlayerTimer.Start();
@@ -475,7 +480,7 @@ namespace CookieRun
         {
             PictureBox pb = (PictureBox)sender;
             Graphics g = e.Graphics;
-            if(pb.Tag!= "Sudah Dibeli")
+            if((string)pb.Tag != "Sudah Dibeli")
             {
                 g.DrawString(pb.Tag + "", new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White), 45, 15);
             }

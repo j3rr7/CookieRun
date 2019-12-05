@@ -86,6 +86,7 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.timerKoin = new System.Windows.Forms.Timer(this.components);
             this.panelShop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackPet)).BeginInit();
@@ -110,14 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.MainMenuPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonPlay = new System.Windows.Forms.Button();
-            this.picPlayer = new System.Windows.Forms.PictureBox();
-            this.timerKoin = new System.Windows.Forms.Timer(this.components);
-            this.MainMenuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // ValidationTimer
@@ -315,11 +308,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Red;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(437, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 21);
+            this.label3.Size = new System.Drawing.Size(148, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "COOMING SOON";
             // 
@@ -427,11 +420,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Location = new System.Drawing.Point(317, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 33);
+            this.label2.Size = new System.Drawing.Size(168, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "COOKIE SHOP";
             // 
@@ -439,15 +432,12 @@
             // 
             this.picPlayer.BackColor = System.Drawing.Color.Transparent;
             this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPlayer.Location = new System.Drawing.Point(76, 290);
+            this.picPlayer.Location = new System.Drawing.Point(50, 295);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(120, 120);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
-            // 
-            this.gerakBackground.Interval = 30;
-            this.gerakBackground.Tick += new System.EventHandler(this.gerakBackground_Tick);
             // 
             // MainMenuPanel
             // 
@@ -455,8 +445,6 @@
             this.MainMenuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainMenuPanel.Controls.Add(this.buttonExit);
             this.MainMenuPanel.Controls.Add(this.buttonShop);
-            this.MainMenuPanel.Controls.Add(this.button2);
-            this.MainMenuPanel.Controls.Add(this.button1);
             this.MainMenuPanel.Controls.Add(this.buttonPlay);
             this.MainMenuPanel.Location = new System.Drawing.Point(4, 4);
             this.MainMenuPanel.Name = "MainMenuPanel";
@@ -624,11 +612,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Red;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(437, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 21);
+            this.label1.Size = new System.Drawing.Size(148, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "COOMING SOON";
             // 
@@ -743,21 +731,13 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label4.Location = new System.Drawing.Point(317, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 33);
+            this.label4.Size = new System.Drawing.Size(126, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "PET SHOP";
-            // picPlayer
-            // 
-            this.picPlayer.Location = new System.Drawing.Point(50, 295);
-            this.picPlayer.Name = "picPlayer";
-            this.picPlayer.Size = new System.Drawing.Size(120, 120);
-            this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPlayer.TabIndex = 0;
-            this.picPlayer.TabStop = false;
             // 
             // timerKoin
             // 
@@ -870,8 +850,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timerKoin;
     }
 }
