@@ -140,6 +140,15 @@ namespace CookieRun.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream bgMusic {
+            get {
+                return ResourceManager.GetStream("bgMusic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap bgShop {
@@ -455,6 +464,9 @@ namespace CookieRun.Properties {
         internal static System.Drawing.Bitmap hero_idleshop__4 {
             get {
                 object obj = ResourceManager.GetObject("hero_idleshop__4", resourceCulture);
+        internal static System.Drawing.Bitmap goldCoin {
+            get {
+                object obj = ResourceManager.GetObject("goldCoin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -555,6 +567,45 @@ namespace CookieRun.Properties {
         internal static System.Drawing.Bitmap hero_slide_2 {
             get {
                 object obj = ResourceManager.GetObject("hero_slide_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream jump {
+            get {
+                return ResourceManager.GetStream("jump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Large_Health_Potion {
+            get {
+                object obj = ResourceManager.GetObject("Large_Health_Potion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silverCoin {
+            get {
+                object obj = ResourceManager.GetObject("silverCoin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Small_Health_Potion {
+            get {
+                object obj = ResourceManager.GetObject("Small_Health_Potion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -110,6 +110,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.MainMenuPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.timerKoin = new System.Windows.Forms.Timer(this.components);
+            this.MainMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // ValidationTimer
@@ -438,16 +446,21 @@
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
             // 
+            this.gerakBackground.Interval = 30;
+            this.gerakBackground.Tick += new System.EventHandler(this.gerakBackground_Tick);
+            // 
             // MainMenuPanel
             // 
             this.MainMenuPanel.BackgroundImage = global::CookieRun.Properties.Resources.bgawal;
             this.MainMenuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainMenuPanel.Controls.Add(this.buttonExit);
             this.MainMenuPanel.Controls.Add(this.buttonShop);
+            this.MainMenuPanel.Controls.Add(this.button2);
+            this.MainMenuPanel.Controls.Add(this.button1);
             this.MainMenuPanel.Controls.Add(this.buttonPlay);
-            this.MainMenuPanel.Location = new System.Drawing.Point(12, 12);
+            this.MainMenuPanel.Location = new System.Drawing.Point(4, 4);
             this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(776, 425);
+            this.MainMenuPanel.Size = new System.Drawing.Size(785, 425);
             this.MainMenuPanel.TabIndex = 1;
             // 
             // buttonExit
@@ -737,12 +750,25 @@
             this.label4.Size = new System.Drawing.Size(157, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "PET SHOP";
+            // picPlayer
+            // 
+            this.picPlayer.Location = new System.Drawing.Point(50, 295);
+            this.picPlayer.Name = "picPlayer";
+            this.picPlayer.Size = new System.Drawing.Size(120, 120);
+            this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPlayer.TabIndex = 0;
+            this.picPlayer.TabStop = false;
+            // 
+            // timerKoin
+            // 
+            this.timerKoin.Interval = 1000;
+            this.timerKoin.Tick += new System.EventHandler(this.TimerKoin_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 443);
+            this.ClientSize = new System.Drawing.Size(801, 447);
             this.Controls.Add(this.MainMenuPanel);
             this.Controls.Add(this.picPlayer);
             this.Controls.Add(this.petShop);
@@ -844,6 +870,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timerKoin;
     }
 }
 
