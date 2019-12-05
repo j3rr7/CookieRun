@@ -18,7 +18,7 @@ namespace CookieRun
         {
             this.highscore = 0;
             this.namaPlayer = "";
-            this.Coin = 0;
+            this.Coin = 20000;
         }
 
 

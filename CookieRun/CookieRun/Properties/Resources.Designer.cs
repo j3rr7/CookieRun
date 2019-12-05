@@ -63,6 +63,56 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap angel_idleshop__1 {
+            get {
+                object obj = ResourceManager.GetObject("angel_idleshop__1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angel_idleshop__2 {
+            get {
+                object obj = ResourceManager.GetObject("angel_idleshop__2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angel_idleshop__3 {
+            get {
+                object obj = ResourceManager.GetObject("angel_idleshop__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angel_idleshop__4 {
+            get {
+                object obj = ResourceManager.GetObject("angel_idleshop__4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angel_shop {
+            get {
+                object obj = ResourceManager.GetObject("angel_shop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
@@ -86,6 +136,16 @@ namespace CookieRun.Properties {
         internal static System.IO.UnmanagedMemoryStream Bgm_spring_event_ep01 {
             get {
                 return ResourceManager.GetStream("Bgm_spring_event_ep01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bgShop {
+            get {
+                object obj = ResourceManager.GetObject("bgShop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -125,6 +185,46 @@ namespace CookieRun.Properties {
         internal static System.Drawing.Bitmap brave_idle_4 {
             get {
                 object obj = ResourceManager.GetObject("brave_idle_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_idleshop__1 {
+            get {
+                object obj = ResourceManager.GetObject("brave_idleshop__1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_idleshop__2 {
+            get {
+                object obj = ResourceManager.GetObject("brave_idleshop__2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_idleshop__3 {
+            get {
+                object obj = ResourceManager.GetObject("brave_idleshop__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brave_idleshop__4 {
+            get {
+                object obj = ResourceManager.GetObject("brave_idleshop__4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -232,6 +332,16 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap brave_shop {
+            get {
+                object obj = ResourceManager.GetObject("brave_shop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brave_slide_1 {
             get {
                 object obj = ResourceManager.GetObject("brave_slide_1", resourceCulture);
@@ -245,6 +355,106 @@ namespace CookieRun.Properties {
         internal static System.Drawing.Bitmap brave_slide_2 {
             get {
                 object obj = ResourceManager.GetObject("brave_slide_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button {
+            get {
+                object obj = ResourceManager.GetObject("button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button2 {
+            get {
+                object obj = ResourceManager.GetObject("button2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonCookie {
+            get {
+                object obj = ResourceManager.GetObject("buttonCookie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buttonPet {
+            get {
+                object obj = ResourceManager.GetObject("buttonPet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit {
+            get {
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hero_Cookie {
+            get {
+                object obj = ResourceManager.GetObject("Hero_Cookie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hero_idleshop__1 {
+            get {
+                object obj = ResourceManager.GetObject("hero_idleshop__1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hero_idleshop__2 {
+            get {
+                object obj = ResourceManager.GetObject("hero_idleshop__2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hero_idleshop__3 {
+            get {
+                object obj = ResourceManager.GetObject("hero_idleshop__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hero_idleshop__4 {
+            get {
+                object obj = ResourceManager.GetObject("hero_idleshop__4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -355,6 +565,56 @@ namespace CookieRun.Properties {
         internal static System.IO.UnmanagedMemoryStream SoundBgm_Lobby_epN01 {
             get {
                 return ResourceManager.GetStream("SoundBgm_Lobby_epN01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zombie_Cookie {
+            get {
+                object obj = ResourceManager.GetObject("Zombie_Cookie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zombie_idleshop__1 {
+            get {
+                object obj = ResourceManager.GetObject("zombie_idleshop__1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zombie_idleshop__2 {
+            get {
+                object obj = ResourceManager.GetObject("zombie_idleshop__2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zombie_idleshop__3 {
+            get {
+                object obj = ResourceManager.GetObject("zombie_idleshop__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zombie_idleshop__4 {
+            get {
+                object obj = ResourceManager.GetObject("zombie_idleshop__4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
