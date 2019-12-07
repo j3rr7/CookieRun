@@ -123,7 +123,7 @@
             // 
             // timerKoin
             // 
-            this.timerKoin.Interval = 1000;
+            this.timerKoin.Interval = 30;
             this.timerKoin.Tick += new System.EventHandler(this.TimerKoin_Tick);
             // 
             // Form1
