@@ -66,6 +66,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SaveLoad.cs" />
+    <Compile Include="shop.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +371,85 @@
     <None Include="Images\bgawal.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\bgcookieshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\angel_shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\brave_shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\Hero_Cookie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\bgShop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\Zombie_Cookie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\button2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Zombie\zombie_idleshop_ 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Zombie\zombie_idleshop_ 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Zombie\zombie_idleshop_ 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Zombie\zombie_idleshop_ 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_idleshop_ 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_idleshop_ 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_idleshop_ 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hero\hero_idleshop_ 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idleshop_ 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idleshop_ 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idleshop_ 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Brave\brave_idleshop_ 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Angel\buttonCookie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Angel\buttonPet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Angel\angel_idleshop_ 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Angel\angel_idleshop_ 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Angel\angel_idleshop_ 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Angel\angel_idleshop_ 4.png" />
     <None Include="Sound\bgMusic.wav" />
   </ItemGroup>
   <ItemGroup>

@@ -205,6 +205,86 @@
   <data name="bgawal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\bgawal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel_shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\angel_shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\brave_shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\button2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hero_Cookie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\Hero_Cookie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zombie_Cookie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\Zombie_Cookie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bgShop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\bgShop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie_idleshop__1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Zombie\zombie_idleshop_ 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie_idleshop__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Zombie\zombie_idleshop_ 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie_idleshop__3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Zombie\zombie_idleshop_ 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie_idleshop__4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Zombie\zombie_idleshop_ 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel_idleshop__1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Angel\angel_idleshop_ 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel_idleshop__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Angel\angel_idleshop_ 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel_idleshop__3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Angel\angel_idleshop_ 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel_idleshop__4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Angel\angel_idleshop_ 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_idleshop__1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Brave\brave_idleshop_ 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_idleshop__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Brave\brave_idleshop_ 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_idleshop__3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Brave\brave_idleshop_ 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave_idleshop__4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Brave\brave_idleshop_ 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonCookie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Angel\buttonCookie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonPet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Angel\buttonPet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_idleshop__1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_idleshop_ 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_idleshop__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_idleshop_ 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_idleshop__3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_idleshop_ 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hero_idleshop__4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Hero\hero_idleshop_ 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data>
   <data name="bgMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sound\bgMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

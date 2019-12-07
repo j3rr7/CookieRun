@@ -5,7 +5,6 @@ namespace CookieRun
 {
     class Coin
     {
- 
         public string jenis { get; set; }
         public int value { get; set; }
         public int x { get; set; }
@@ -38,10 +37,6 @@ namespace CookieRun
             {
                 return CookieRun.Properties.Resources.goldCoin;
             }
-        }
-        public Rectangle getCoin()
-        {
-            return new Rectangle(x,y,w,h);
         }
 
     }

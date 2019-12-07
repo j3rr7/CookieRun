@@ -15,7 +15,7 @@ namespace CookieRun
         int status; //0 = idle | 1 = running | 2 = jumping | 3 = sliding | 99 = runboosted -ToDo add more event and validation
 
         //filename constraint ==|
-        string jenisCookie; //==|
+        string jenisCookie;
         string statusCookie; //=|
         //======================|
 
@@ -83,5 +83,6 @@ namespace CookieRun
 
         public int Jenis { get => jenis; set => jenis = value; }
         public int Status { get => status; set => status = value; }
+        public string JenisCookie { get => jenisCookie; set => jenisCookie = value; }
     }
 }
