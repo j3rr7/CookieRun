@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+
 namespace CookieRun
 {
     public partial class Form1 : Form
@@ -29,6 +30,7 @@ namespace CookieRun
         int J_Jump = 2;
         bool isJumping = false;
         //==================
+
         //SHOP COOKIE
         List<shop> gambarIdleShop = new List<shop>();
         List<int> locInfo = new List<int>();
@@ -39,14 +41,16 @@ namespace CookieRun
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
         Image backgroundImg;
-        Image backgroundImg2;
         bool isStarted = false;
 
         Player play = new Player();
 
         //SOUND AND MUSIC
-        System.Media.SoundPlayer mm_music = new System.Media.SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
-        System.Media.SoundPlayer bg_music = new System.Media.SoundPlayer(Properties.Resources.Bgm_spring_event_ep01);
+        SoundPlayer mm_music = new SoundPlayer(Properties.Resources.SoundBgm_Lobby_epN01);
+        SoundPlayer bg_music = new SoundPlayer(Properties.Resources.bgMusic);
+
+        List<Coin> c = new List<Coin>();
+
         public Form1()
         {
             InitializeComponent();
@@ -72,9 +76,6 @@ namespace CookieRun
             MainMenuPanel.Visible = true;
             picPlayer.BackColor = Color.Transparent;    // <- set color to transparent
 
-            //MainMenuPanel.BringToFront();
-
-            //picKoin.BackColor = Color.Transparent;
             
             //Constraint interval player gerak
             this.GerakPlayerTimer.Interval = this.refreshTickPlayer;
@@ -94,7 +95,7 @@ namespace CookieRun
 
             mm_music.PlayLooping();
         }
-
+        Rectangle r;
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             g = e.Graphics;
@@ -108,13 +109,16 @@ namespace CookieRun
                     g.DrawImage(backgroundImg, posisiBackground[i], 0, 800, 450); // gambar , x , y , w , h 800 450
                    
                 }
-                for (int a = 0; a < c.Count; a++)
-                {
-                    if (c[a].x < 300)
-                    {
-                        g.DrawImage(c[a].drawCoin(), c[a].x + a * 50, c[a].y, c[a].w, c[a].h);
-                    }
-                }
+
+                cetakKoin();
+                //iki rasae sg mbo tambahi gus
+                //for (int a = 0; a < c.Count; a++)
+                //{
+                //    if (c[a].x < 300)
+                //    {
+                //        g.DrawImage(c[a].drawCoin(), c[a].x + a * 50, c[a].y, c[a].w, c[a].h);
+                //    }
+                //}
             }
             //=====================
 
@@ -130,20 +134,20 @@ namespace CookieRun
 
             ////Draw hitbox Player
             ////=====================
-            //if (player.Status != 3)
-            //{
-            //    Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 60), new Size(50, 60));
-            //    g.DrawRectangle(new Pen(Color.Red, 2), r);
-            //}
-            //else
-            //{
-            //    Rectangle r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 90), new Size(60, 30));
-            //    g.DrawRectangle(new Pen(Color.Red, 2), r);
-            //}
+            if (player.Status != 3)
+            {
+                r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 90), new Size(110, 120));
+                g.DrawRectangle(new Pen(Color.Red, 2), r);
+            }
+            else
+            {
+               r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 150), new Size(130, 50));
+                g.DrawRectangle(new Pen(Color.Red, 2), r);
+            }
             ////=====================
             ///
 
-            
+
         }
 
         private void gerakBackground_Tick(object sender, EventArgs e)
@@ -155,6 +159,14 @@ namespace CookieRun
                 if (posisiBackground[i] <= -800)
                 {
                     posisiBackground[i] += (800 * 2) - 4; //kirim gambar habis ke kanan
+                }
+            }
+            for (int i = 0; i < c.Count(); i++)
+            {
+                c[i].x -= 5;
+                Rectangle coin = c[i].getCoin();
+                if (r.IntersectsWith(coin)){
+                    c.RemoveAt(i);
                 }
             }
         }
@@ -296,15 +308,36 @@ namespace CookieRun
                 int ran = r.Next(2);
                 if (ran == 0)
                 {
-                    c.Add(new CoinBesar(150, 350));
+                    c.Add(new CoinBesar(200,300));
                 }
                 else if (ran == 1)
                 {
-                    c.Add(new CoinKecil(150, 350));
+                    c.Add(new CoinKecil(200, 350));
                 }
             }
            
         }
+
+        public void cetakKoin()
+        {
+            if (c.Count() >= 5)
+            {
+                for (int a = 0; a < c.Count(); a++)
+                {
+                    Image ip = c[a].drawCoin(c[a].jenis);
+                    if (a>0 && c[a - 1].jenis == "besar")
+                    {
+                        g.DrawImage(ip, c[a].x + a * 60, c[a].y, c[a].w, c[a].h);
+                    }else
+                    {
+                        g.DrawImage(ip, c[a].x + a * 50, c[a].y, c[a].w, c[a].h);
+                    }
+                }
+            }
+            
+        }
+        //      [  J U M P  ]
+        //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
         //[  K E Y  E V E N T  ] GAME
         //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -313,7 +346,8 @@ namespace CookieRun
             isStarted = !isStarted;
 
             mm_music.Stop();
-            bg_music.PlayLooping(); //error
+            mm_music.Dispose();
+            bg_music.PlayLooping(); 
 
             this.CooldownTimer.Start();
             this.GerakPlayerTimer.Start();
@@ -475,7 +509,7 @@ namespace CookieRun
         {
             PictureBox pb = (PictureBox)sender;
             Graphics g = e.Graphics;
-            if(pb.Tag!= "Sudah Dibeli")
+            if((string)pb.Tag != "Sudah Dibeli")
             {
                 g.DrawString(pb.Tag + "", new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White), 45, 15);
             }

@@ -461,9 +461,14 @@ namespace CookieRun.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hero_idleshop__4 {
-            get {
+        internal static System.Drawing.Bitmap hero_idleshop__4
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("hero_idleshop__4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
         internal static System.Drawing.Bitmap goldCoin {
             get {
                 object obj = ResourceManager.GetObject("goldCoin", resourceCulture);

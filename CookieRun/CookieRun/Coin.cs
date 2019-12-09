@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace CookieRun
 {
@@ -12,7 +13,7 @@ namespace CookieRun
         public int h { get; set; }
 
         Image temp;
-        private Bitmap imgCoin = null;
+        //private Bitmap imgCoin = null;
 
         public Coin(string jenis, int value, int x, int y, int w, int h)
         {
@@ -24,10 +25,11 @@ namespace CookieRun
             this.h = h;
         }
 
-        public Image drawCoin()
+
+        public Image drawCoin(string jenis)
         {
-            int ran = 1;
-            if (ran == 0)
+            
+            if (jenis=="kecil")
             {
                 return CookieRun.Properties.Resources.silverCoin;
             }
