@@ -35,6 +35,28 @@
             this.GerakPlayerTimer = new System.Windows.Forms.Timer(this.components);
             this.gerakBackground = new System.Windows.Forms.Timer(this.components);
             this.timerShop = new System.Windows.Forms.Timer(this.components);
+            this.timerKoin = new System.Windows.Forms.Timer(this.components);
+            this.petShop = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnBackCookie = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.zombie2 = new System.Windows.Forms.PictureBox();
+            this.hero2 = new System.Windows.Forms.PictureBox();
+            this.angel2 = new System.Windows.Forms.PictureBox();
+            this.brave2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelShop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -60,33 +82,22 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.picPlayer = new System.Windows.Forms.PictureBox();
             this.MainMenuPanel = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonShop = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.petShop = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btnBackCookie = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.timerKoin = new System.Windows.Forms.Timer(this.components);
+            this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.petShop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBackCookie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zombie2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hero2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brave2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panelShop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackPet)).BeginInit();
@@ -98,19 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             this.MainMenuPanel.SuspendLayout();
-            this.petShop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBackCookie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // ValidationTimer
@@ -137,6 +137,264 @@
             this.timerShop.Enabled = true;
             this.timerShop.Interval = 250;
             this.timerShop.Tick += new System.EventHandler(this.timerShop_Tick);
+            // 
+            // timerKoin
+            // 
+            this.timerKoin.Interval = 30;
+            this.timerKoin.Tick += new System.EventHandler(this.TimerKoin_Tick);
+            // 
+            // petShop
+            // 
+            this.petShop.BackgroundImage = global::CookieRun.Properties.Resources.bgShop;
+            this.petShop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.petShop.Controls.Add(this.label24);
+            this.petShop.Controls.Add(this.label23);
+            this.petShop.Controls.Add(this.label22);
+            this.petShop.Controls.Add(this.label21);
+            this.petShop.Controls.Add(this.label20);
+            this.petShop.Controls.Add(this.label19);
+            this.petShop.Controls.Add(this.label18);
+            this.petShop.Controls.Add(this.label17);
+            this.petShop.Controls.Add(this.btnBackCookie);
+            this.petShop.Controls.Add(this.label1);
+            this.petShop.Controls.Add(this.zombie2);
+            this.petShop.Controls.Add(this.hero2);
+            this.petShop.Controls.Add(this.angel2);
+            this.petShop.Controls.Add(this.brave2);
+            this.petShop.Controls.Add(this.pictureBox10);
+            this.petShop.Controls.Add(this.pictureBox11);
+            this.petShop.Controls.Add(this.pictureBox12);
+            this.petShop.Controls.Add(this.pictureBox13);
+            this.petShop.Controls.Add(this.pictureBox14);
+            this.petShop.Controls.Add(this.label4);
+            this.petShop.Location = new System.Drawing.Point(12, 12);
+            this.petShop.Name = "petShop";
+            this.petShop.Size = new System.Drawing.Size(776, 425);
+            this.petShop.TabIndex = 16;
+            this.petShop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.petShop_MouseDown);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(630, 324);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(121, 26);
+            this.label24.TabIndex = 25;
+            this.label24.Text = "Recovers 10.0% Energy\r\nafter collision";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(432, 321);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(125, 26);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Jellyco Missiles every 22 \r\nsec+170 pts for all Jellies";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(637, 267);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(16, 18);
+            this.label22.TabIndex = 23;
+            this.label22.Text = "1";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(443, 266);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(16, 18);
+            this.label21.TabIndex = 22;
+            this.label21.Text = "1";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(247, 266);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(16, 18);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "1";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(247, 324);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(114, 26);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Revives both Cookies \r\nwith 29 && 11 Energy";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(50, 321);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(133, 26);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Creates Yellow Bear Jellies\r\n every 3.7 sec";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(54, 267);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(16, 18);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "1";
+            // 
+            // btnBackCookie
+            // 
+            this.btnBackCookie.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackCookie.BackgroundImage = global::CookieRun.Properties.Resources.buttonCookie;
+            this.btnBackCookie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBackCookie.Location = new System.Drawing.Point(29, 3);
+            this.btnBackCookie.Name = "btnBackCookie";
+            this.btnBackCookie.Size = new System.Drawing.Size(134, 44);
+            this.btnBackCookie.TabIndex = 17;
+            this.btnBackCookie.TabStop = false;
+            this.btnBackCookie.Click += new System.EventHandler(this.btnBackCookie_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Red;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(418, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "COOMING SOON";
+            // 
+            // zombie2
+            // 
+            this.zombie2.BackColor = System.Drawing.Color.Transparent;
+            this.zombie2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("zombie2.BackgroundImage")));
+            this.zombie2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.zombie2.Location = new System.Drawing.Point(620, 360);
+            this.zombie2.Name = "zombie2";
+            this.zombie2.Size = new System.Drawing.Size(116, 48);
+            this.zombie2.TabIndex = 12;
+            this.zombie2.TabStop = false;
+            this.zombie2.Tag = "2000";
+            this.zombie2.Click += new System.EventHandler(this.beli_pet);
+            this.zombie2.Paint += new System.Windows.Forms.PaintEventHandler(this.zombie2_Paint);
+            // 
+            // hero2
+            // 
+            this.hero2.BackColor = System.Drawing.Color.Transparent;
+            this.hero2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hero2.BackgroundImage")));
+            this.hero2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.hero2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.hero2.Location = new System.Drawing.Point(441, 360);
+            this.hero2.Name = "hero2";
+            this.hero2.Size = new System.Drawing.Size(116, 48);
+            this.hero2.TabIndex = 11;
+            this.hero2.TabStop = false;
+            this.hero2.Tag = "cooming soon";
+            this.hero2.Click += new System.EventHandler(this.beli_pet);
+            // 
+            // angel2
+            // 
+            this.angel2.BackColor = System.Drawing.Color.Transparent;
+            this.angel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("angel2.BackgroundImage")));
+            this.angel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.angel2.Location = new System.Drawing.Point(243, 360);
+            this.angel2.Name = "angel2";
+            this.angel2.Size = new System.Drawing.Size(116, 48);
+            this.angel2.TabIndex = 10;
+            this.angel2.TabStop = false;
+            this.angel2.Tag = "1000";
+            this.angel2.Click += new System.EventHandler(this.beli_pet);
+            this.angel2.Paint += new System.Windows.Forms.PaintEventHandler(this.angel2_Paint);
+            // 
+            // brave2
+            // 
+            this.brave2.BackColor = System.Drawing.Color.Transparent;
+            this.brave2.BackgroundImage = global::CookieRun.Properties.Resources.button;
+            this.brave2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.brave2.Location = new System.Drawing.Point(53, 360);
+            this.brave2.Name = "brave2";
+            this.brave2.Size = new System.Drawing.Size(116, 48);
+            this.brave2.TabIndex = 9;
+            this.brave2.TabStop = false;
+            this.brave2.Tag = "Sudah Dibeli";
+            this.brave2.Click += new System.EventHandler(this.beli_pet);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.BackgroundImage = global::CookieRun.Properties.Resources.zombie2_shop__1_;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(633, 141);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(116, 117);
+            this.pictureBox10.TabIndex = 8;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::CookieRun.Properties.Resources.exit;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Location = new System.Drawing.Point(700, 7);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(70, 44);
+            this.pictureBox11.TabIndex = 7;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.BackgroundImage = global::CookieRun.Properties.Resources.zombie2_shop__2_;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Location = new System.Drawing.Point(455, 141);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(90, 117);
+            this.pictureBox12.TabIndex = 6;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.BackgroundImage = global::CookieRun.Properties.Resources.angel2_shop__1_;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(243, 141);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(116, 117);
+            this.pictureBox13.TabIndex = 5;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.BackgroundImage = global::CookieRun.Properties.Resources.brave2_shop__1_;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox14.Location = new System.Drawing.Point(47, 141);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(116, 117);
+            this.pictureBox14.TabIndex = 4;
+            this.pictureBox14.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(317, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "PET SHOP";
             // 
             // panelShop
             // 
@@ -310,7 +568,7 @@
             this.label3.BackColor = System.Drawing.Color.Red;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(437, 81);
+            this.label3.Location = new System.Drawing.Point(417, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 20);
             this.label3.TabIndex = 14;
@@ -341,7 +599,7 @@
             this.hero.Size = new System.Drawing.Size(116, 48);
             this.hero.TabIndex = 11;
             this.hero.TabStop = false;
-            this.hero.Tag = "0";
+            this.hero.Tag = "cooming soon";
             this.hero.Click += new System.EventHandler(this.beli_cookie);
             // 
             // angel
@@ -369,6 +627,7 @@
             this.brave.TabIndex = 9;
             this.brave.TabStop = false;
             this.brave.Tag = "0";
+            this.brave.Click += new System.EventHandler(this.brave_Click);
             // 
             // pictureBox5
             // 
@@ -428,17 +687,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "COOKIE SHOP";
             // 
-            // picPlayer
-            // 
-            this.picPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPlayer.Location = new System.Drawing.Point(50, 295);
-            this.picPlayer.Name = "picPlayer";
-            this.picPlayer.Size = new System.Drawing.Size(120, 120);
-            this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPlayer.TabIndex = 0;
-            this.picPlayer.TabStop = false;
-            // 
             // MainMenuPanel
             // 
             this.MainMenuPanel.BackgroundImage = global::CookieRun.Properties.Resources.bgawal;
@@ -490,269 +738,26 @@
             this.buttonPlay.UseVisualStyleBackColor = false;
             this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             // 
-            // petShop
+            // picPlayer
             // 
-            this.petShop.BackgroundImage = global::CookieRun.Properties.Resources.bgShop;
-            this.petShop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.petShop.Controls.Add(this.label24);
-            this.petShop.Controls.Add(this.label23);
-            this.petShop.Controls.Add(this.label22);
-            this.petShop.Controls.Add(this.label21);
-            this.petShop.Controls.Add(this.label20);
-            this.petShop.Controls.Add(this.label19);
-            this.petShop.Controls.Add(this.label18);
-            this.petShop.Controls.Add(this.label17);
-            this.petShop.Controls.Add(this.btnBackCookie);
-            this.petShop.Controls.Add(this.label1);
-            this.petShop.Controls.Add(this.pictureBox6);
-            this.petShop.Controls.Add(this.pictureBox7);
-            this.petShop.Controls.Add(this.pictureBox8);
-            this.petShop.Controls.Add(this.pictureBox9);
-            this.petShop.Controls.Add(this.pictureBox10);
-            this.petShop.Controls.Add(this.pictureBox11);
-            this.petShop.Controls.Add(this.pictureBox12);
-            this.petShop.Controls.Add(this.pictureBox13);
-            this.petShop.Controls.Add(this.pictureBox14);
-            this.petShop.Controls.Add(this.label4);
-            this.petShop.Location = new System.Drawing.Point(12, 12);
-            this.petShop.Name = "petShop";
-            this.petShop.Size = new System.Drawing.Size(776, 425);
-            this.petShop.TabIndex = 16;
-            this.petShop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.petShop_MouseDown);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(630, 324);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(121, 26);
-            this.label24.TabIndex = 25;
-            this.label24.Text = "Recovers 10.0% Energy\r\nafter collision";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(432, 321);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(125, 26);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "Jellyco Missiles every 22 \r\nsec+170 pts for all Jellies";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(637, 267);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(16, 18);
-            this.label22.TabIndex = 23;
-            this.label22.Text = "1";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(443, 266);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(16, 18);
-            this.label21.TabIndex = 22;
-            this.label21.Text = "1";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(247, 266);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(16, 18);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "1";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(247, 324);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(114, 26);
-            this.label19.TabIndex = 20;
-            this.label19.Text = "Revives both Cookies \r\nwith 29 && 11 Energy";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(50, 321);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(133, 26);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Creates Yellow Bear Jellies\r\n every 3.7 sec";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(54, 267);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(16, 18);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "1";
-            // 
-            // btnBackCookie
-            // 
-            this.btnBackCookie.BackColor = System.Drawing.Color.Transparent;
-            this.btnBackCookie.BackgroundImage = global::CookieRun.Properties.Resources.buttonCookie;
-            this.btnBackCookie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBackCookie.Location = new System.Drawing.Point(29, 3);
-            this.btnBackCookie.Name = "btnBackCookie";
-            this.btnBackCookie.Size = new System.Drawing.Size(134, 44);
-            this.btnBackCookie.TabIndex = 17;
-            this.btnBackCookie.TabStop = false;
-            this.btnBackCookie.Click += new System.EventHandler(this.btnBackCookie_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Red;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(437, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "COOMING SOON";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(620, 360);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(116, 48);
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Tag = "2000";
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.pictureBox7.Location = new System.Drawing.Point(441, 360);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(116, 48);
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Tag = "0";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(243, 360);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(116, 48);
-            this.pictureBox8.TabIndex = 10;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Tag = "1000";
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = global::CookieRun.Properties.Resources.button;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(53, 360);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(116, 48);
-            this.pictureBox9.TabIndex = 9;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Tag = "0";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.BackgroundImage = global::CookieRun.Properties.Resources.Zombie_Cookie;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(633, 141);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(116, 117);
-            this.pictureBox10.TabIndex = 8;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::CookieRun.Properties.Resources.exit;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(700, 7);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(70, 44);
-            this.pictureBox11.TabIndex = 7;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.BackgroundImage = global::CookieRun.Properties.Resources.Hero_Cookie;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(455, 141);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(90, 117);
-            this.pictureBox12.TabIndex = 6;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.BackgroundImage = global::CookieRun.Properties.Resources.angel_shop;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(243, 141);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(116, 117);
-            this.pictureBox13.TabIndex = 5;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.BackgroundImage = global::CookieRun.Properties.Resources.brave_shop;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(47, 141);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(116, 117);
-            this.pictureBox14.TabIndex = 4;
-            this.pictureBox14.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(317, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "PET SHOP";
-            // 
-            // timerKoin
-            // 
-            this.timerKoin.Interval = 30;
-            this.timerKoin.Tick += new System.EventHandler(this.TimerKoin_Tick);
+            this.picPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picPlayer.Location = new System.Drawing.Point(50, 295);
+            this.picPlayer.Name = "picPlayer";
+            this.picPlayer.Size = new System.Drawing.Size(120, 120);
+            this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPlayer.TabIndex = 0;
+            this.picPlayer.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 447);
+            this.Controls.Add(this.panelShop);
             this.Controls.Add(this.MainMenuPanel);
             this.Controls.Add(this.picPlayer);
             this.Controls.Add(this.petShop);
-            this.Controls.Add(this.panelShop);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -762,6 +767,18 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.petShop.ResumeLayout(false);
+            this.petShop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBackCookie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zombie2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hero2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.angel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brave2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panelShop.ResumeLayout(false);
             this.panelShop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -774,20 +791,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             this.MainMenuPanel.ResumeLayout(false);
-            this.petShop.ResumeLayout(false);
-            this.petShop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBackCookie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -818,10 +823,10 @@
         private System.Windows.Forms.Timer timerShop;
         private System.Windows.Forms.Panel petShop;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox zombie2;
+        private System.Windows.Forms.PictureBox hero2;
+        private System.Windows.Forms.PictureBox angel2;
+        private System.Windows.Forms.PictureBox brave2;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;

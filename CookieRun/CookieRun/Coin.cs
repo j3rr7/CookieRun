@@ -38,7 +38,10 @@ namespace CookieRun
                 return CookieRun.Properties.Resources.goldCoin;
             }
         }
-
+        public Rectangle getCoin()
+        {
+            return new Rectangle(x, y, w, h);
+        }
     }
     class CoinKecil : Coin
     {

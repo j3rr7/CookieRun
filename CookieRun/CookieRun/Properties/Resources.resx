@@ -284,7 +284,8 @@
     <value>..\Images\Hero\hero_idleshop_ 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hero_idleshop__4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Hero\hero_idleshop_ 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value></data>
+    <value>..\Images\Hero\hero_idleshop_ 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bgMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sound\bgMusic.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -297,13 +298,46 @@
   <data name="Small_Health_Potion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Small_Health_Potion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="silverCoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\silverCoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="goldCoin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goldCoin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel2_shop__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Angel Cookie\angel2_shop_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel2_shop__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Angel Cookie\angel2_shop_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel2_shop__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Angel Cookie\angel2_shop_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angel2_shop__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Angel Cookie\angel2_shop_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave2_shop__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Brave Cookie\brave2_shop (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave2_shop__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Brave Cookie\brave2_shop (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave2_shop__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Brave Cookie\brave2_shop (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brave2_shop__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Brave Cookie\brave2_shop (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie2_shop__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Zombie Cookie\zombie2_shop (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie2_shop__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Zombie Cookie\zombie2_shop (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie2_shop__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Zombie Cookie\zombie2_shop (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zombie2_shop__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Pet Zombie Cookie\zombie2_shop (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
