@@ -57,7 +57,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Obstacle.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -471,6 +470,7 @@
   <ItemGroup>
     <None Include="Resources\goldCoin.png" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
 <<<<<<< HEAD
     <None Include="Resources\witchOven_1.png" />
@@ -598,5 +598,7 @@
     <None Include="Images\Pet Zombie Cookie\zombie2_shop %284%29.png" />
 >>>>>>> 0631794cd6dfe5b4cc925f6872fbc00deaf4b79c
   </ItemGroup>
+=======
+>>>>>>> parent of 5493c66... coin and obstacle
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
