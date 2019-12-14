@@ -472,6 +472,7 @@
     <None Include="Resources\goldCoin.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\witchOven_1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -560,6 +561,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\witchOven_30.png" />
+=======
+    <None Include="Images\Pet Angel Cookie\angel2_shop_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Angel Cookie\angel2_shop_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Angel Cookie\angel2_shop_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Angel Cookie\angel2_shop_ %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Brave Cookie\brave2_shop %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Brave Cookie\brave2_shop %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Brave Cookie\brave2_shop %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Brave Cookie\brave2_shop %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Zombie Cookie\zombie2_shop %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Zombie Cookie\zombie2_shop %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Zombie Cookie\zombie2_shop %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Pet Zombie Cookie\zombie2_shop %284%29.png" />
+>>>>>>> 0631794cd6dfe5b4cc925f6872fbc00deaf4b79c
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

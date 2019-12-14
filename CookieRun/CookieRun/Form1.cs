@@ -37,7 +37,8 @@ namespace CookieRun
         List<int> locInfo = new List<int>();
         //==================
         //SHOP PET
-
+        List<shop> gambarIdleShop2 = new List<shop>();
+        List<int> locInfo2 = new List<int>();
         //===================
         //BACKGROUND
         List<int> posisiBackground = new List<int>();
@@ -57,7 +58,10 @@ namespace CookieRun
         {
             InitializeComponent();
             label2.BackColor = Color.FromArgb(49, 166, 189);
-            
+
+            //hero.Enabled = false;
+            //hero2.Enabled = false;
+           
 
             picPlayer.SendToBack();
 
@@ -66,10 +70,14 @@ namespace CookieRun
             gambarIdleShop.Add(new shop("hero", pictureBox3, "While the other Cookies escaped the hot oven one by one, this Cookie remained inside, lost in his research. He was brilliant enough to finally succeed in building an ultimate escaping machine, the 'Caramel Syrup Suit'. The suit is optimized for escape with a rechargeable Candy Engine as its core source of energy.",555,0));
             gambarIdleShop.Add(new shop("zombie", pictureBox5, "Zombie Cookie was thoroughly underbaked and slopped carelessly with strawberry jam and melted chocolate. But you see, the key ingredient for Zombie Cookie is a pinch of zombie cells to the dough. And no need to worry about getting your own zombie cells! ",748,20000));
 
-
+            gambarIdleShop2.Add(new shop("brave2", pictureBox14, "What a determined Cookie! Defying his destiny, he escaped from the Witch's grasp and paved the way for others to follow. Energy upgrades will make him stronger.", 162, 0));
+            gambarIdleShop2.Add(new shop("angel2", pictureBox13, "Angel Cookie is trying to master the art of flying but can't rise higher than a teeny tiny bit above the ground just yet! Angel Cookie's favorite animals are penguins, ostriches, and baby chicks.Can you guess why ? Shiny golden curls are the source of the Cookie's special Magnetic Aura, which attracts all Coins and Jellies nearby. Yum!", 356, 10000));
+            gambarIdleShop2.Add(new shop("zombie2", pictureBox12, "While the other Cookies escaped the hot oven one by one, this Cookie remained inside, lost in his research. He was brilliant enough to finally succeed in building an ultimate escaping machine, the 'Caramel Syrup Suit'. The suit is optimized for escape with a rechargeable Candy Engine as its core source of energy.", 555, 0));
+            gambarIdleShop2.Add(new shop("zombie2", pictureBox10, "Zombie Cookie was thoroughly underbaked and slopped carelessly with strawberry jam and melted chocolate. But you see, the key ingredient for Zombie Cookie is a pinch of zombie cells to the dough. And no need to worry about getting your own zombie cells! ", 748, 20000));
             gambarIdleShop[1].picture.Invalidate();
-
             gambarIdleShop[3].picture.Invalidate();
+            gambarIdleShop2[1].picture.Invalidate();
+            gambarIdleShop2[3].picture.Invalidate();
         }
 
         
@@ -208,6 +216,8 @@ namespace CookieRun
             for (int i = 0; i < 4; i++)
             {
                 gambarIdleShop[i].ubahgambar();
+                gambarIdleShop2[i].ubahgambar2();
+                
             }
         }
         //Event validate every few Second
@@ -473,6 +483,7 @@ namespace CookieRun
         {
             MainMenuPanel.BringToFront();
         }
+        
         private void beli_cookie(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;// kalo mau ganti harga, ganti tag dari button
@@ -494,12 +505,51 @@ namespace CookieRun
             }
             catch (Exception)
             {
-
-                MessageBox.Show("pilih cookie");
-                player.JenisCookie = pb.Name;
+                if (pb.Tag=="cooming soon")
+                {
+                    MessageBox.Show("Tidak Bisa Dibeli");
+                }
+                else
+                {
+                    MessageBox.Show("pilih cookie");
+                    player.JenisCookie = pb.Name;
+                }
             }
         }
+        private void beli_pet(object sender, EventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;// kalo mau ganti harga, ganti tag dari button
+            try
+            {
+                int harga = Convert.ToInt32(pb.Tag);
+                if (harga <= play.Coin)
+                {
+                    play.Coin -= harga;
+                    pb.Tag = "Sudah Dibeli";
+                    pb.BackgroundImage = Properties.Resources.button;
+                    MessageBox.Show(play.Coin + "");
+                    pb.Invalidate();
+                }
+                else
+                {
+                    MessageBox.Show("Uang Tidak Cukup");
+                }
+            }
+            catch (Exception)
+            {
 
+                if(pb.Tag=="cooming soon")
+                {
+                    
+                    MessageBox.Show("Tidak Bisa Dibeli");
+                }
+                else
+                {
+                    MessageBox.Show("pilih pet");
+                    player.JenisCookie = pb.Name;
+                }
+            }
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
 
@@ -602,13 +652,51 @@ namespace CookieRun
 
         private void MainMenuPanel_Paint(object sender, PaintEventArgs e)
         {
+            //MessageBox.Show("Ini Shop");
+            int x = e.Location.X;
+            int y = e.Location.Y;
+            Rectangle mouse = new Rectangle(x, y, 1, 1);
 
+            for (int i = 0; i < gambarIdleShop2.Count; i++)
+            {
+                Rectangle rect = new Rectangle(gambarIdleShop2[i].X, 92, 25, 25);
+                if (mouse.IntersectsWith(rect))
+                {                           
+                    string judul = gambarIdleShop2[i].gambar.Substring(0, 1).ToUpper() + gambarIdleShop2[i].gambar.Substring(1, gambarIdleShop2[i].gambar.Length-2) + " Pet";
+                    MessageBox.Show(gambarIdleShop2[i].deskripsi, judul);
+                }
+            }
         }
 
         private void TimerHp_Tick(object sender, EventArgs e)
         {
             progressBar1.Visible = true;
             progressBar1.Value--;
+        }
+
+        private void brave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zombie2_Paint(object sender, PaintEventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;
+            Graphics g = e.Graphics;
+            if ((string)pb.Tag != "Sudah Dibeli")
+            {
+                g.DrawString(pb.Tag + "", new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White), 45, 15);
+            }
+        }
+
+        private void angel2_Paint(object sender, PaintEventArgs e)
+        {
+            PictureBox pb = (PictureBox)sender;
+            Graphics g = e.Graphics;
+            if ((string)pb.Tag != "Sudah Dibeli")
+            {
+                g.DrawString(pb.Tag + "", new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White), 45, 15);
+            }
         }
 
         //[  K E Y  E V E N T  ] GAME

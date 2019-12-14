@@ -40,5 +40,17 @@ namespace CookieRun
                 gambarke = 1;
             }
         }
+
+        public void ubahgambar2()
+        {
+            object obj = Properties.Resources.ResourceManager.GetObject(gambar + "_shop__" + gambarke+"_");
+            Image img = (Image)obj;
+            picture.BackgroundImage = img;
+            gambarke++;
+            if (gambarke == 5)
+            {
+                gambarke = 1;
+            }
+        }
     }
 }
