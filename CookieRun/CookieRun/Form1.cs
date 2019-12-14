@@ -17,6 +17,7 @@ namespace CookieRun
         Graphics g;
 
         int timer = 3;
+        int skor = 0;
 
         int refreshTickPlayer = 60; //Refresh Rate Player Animation
 
@@ -50,6 +51,7 @@ namespace CookieRun
         SoundPlayer bg_music = new SoundPlayer(Properties.Resources.bgMusic);
 
         List<Coin> c = new List<Coin>();
+        List<Obstacle> o = new List<Obstacle>();
 
         public Form1()
         {
@@ -95,11 +97,14 @@ namespace CookieRun
 
             mm_music.PlayLooping();
         }
-        Rectangle r;
+
+        Rectangle rPlayer;
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            picPlayer.Size = new Size(200, 240);
+            picPlayer.Location = new Point(50,180);
+            this.DoubleBuffered = true;
             g = e.Graphics;
-
             //Draw Background
             //=====================
             if (isStarted)
@@ -109,16 +114,25 @@ namespace CookieRun
                     g.DrawImage(backgroundImg, posisiBackground[i], 0, 800, 450); // gambar , x , y , w , h 800 450
                    
                 }
-
-                cetakKoin();
-                //iki rasae sg mbo tambahi gus
-                //for (int a = 0; a < c.Count; a++)
-                //{
-                //    if (c[a].x < 300)
-                //    {
-                //        g.DrawImage(c[a].drawCoin(), c[a].x + a * 50, c[a].y, c[a].w, c[a].h);
-                //    }
-                //}
+                //cetak koin
+                for (int a = 0; a < c.Count(); a++)
+                {
+                    if (c[a].stat == false)
+                    {
+                        Image ip = c[a].drawCoin(c[a].jenis);
+                        g.DrawImage(ip, c[a].x, c[a].y, c[a].w, c[a].h);
+                        //c[a].x = c[a].x + a * 60;
+                    }
+                   
+                }
+                //cetak obstacle
+                for (int i = 0; i < o.Count(); i++)
+                {
+                    Image io = o[i].drawObs(o[i].jenis);
+                    g.DrawImage(io, o[i].x + i * 500, o[i].y, o[i].w, o[i].h);
+                    //o[i].x = o[i].x + i * 500;
+                }
+                
             }
             //=====================
 
@@ -136,16 +150,18 @@ namespace CookieRun
             ////=====================
             if (player.Status != 3)
             {
-                r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 90), new Size(110, 120));
-                g.DrawRectangle(new Pen(Color.Red, 2), r);
+                rPlayer = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 90), new Size(110, 120));
+                g.DrawRectangle(new Pen(Color.Red, 2), rPlayer);
             }
             else
             {
-               r = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 150), new Size(130, 50));
-                g.DrawRectangle(new Pen(Color.Red, 2), r);
+                rPlayer = new Rectangle(new Point(picPlayer.Location.X + 40, picPlayer.Location.Y + 150), new Size(130, 50));
+                g.DrawRectangle(new Pen(Color.Red, 2), rPlayer);
             }
             ////=====================
             ///
+            //cetak koin
+            
 
 
         }
@@ -161,12 +177,28 @@ namespace CookieRun
                     posisiBackground[i] += (800 * 2) - 4; //kirim gambar habis ke kanan
                 }
             }
+            //intersect player with coin
             for (int i = 0; i < c.Count(); i++)
             {
                 c[i].x -= 5;
-                Rectangle coin = c[i].getCoin();
-                if (r.IntersectsWith(coin)){
-                    c.RemoveAt(i);
+                Rectangle co = c[i].getCoin(c[i].jenis);
+                if (rPlayer.IntersectsWith(co) && c[i].stat==false)
+                {
+                    skor++;
+                    c[i].stat = true;
+                    Console.WriteLine(skor);
+                    //c.RemoveAt(i);
+                    //i--;
+                }
+            }           
+            //intersect player with obs
+            for (int i = 0; i < o.Count(); i++)
+            {
+                o[i].x -= 5;
+                Rectangle ob = o[i].getObs();
+                if (rPlayer.IntersectsWith(ob) && o[i].stat==false)
+                {
+                    o[i].stat = true;
                 }
             }
         }
@@ -196,7 +228,6 @@ namespace CookieRun
             {
                 player.Status = 1; // Change Player status
                 this.gerakBackground.Start();//Start gerak background setelah cooldown selesai
-                this.timerKoin.Start();
                 this.CooldownTimer.Stop();
             }
         }
@@ -302,40 +333,56 @@ namespace CookieRun
         //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         public void spawnKoin()
         {
+            //if (c.Count() > 0)
+            //{
+            //    c.Clear();
+            //}
             Random r = new Random();
-            for (int i = 0; i < 5; i++)
+            //for (int i = 0; i < 12; i++)
+            //{
+            //    int ran = r.Next(2);
+            //    int tempX = 200 + i * 60;
+            //    if (ran == 0)
+            //    {
+            //        c.Add(new CoinBesar(tempX,300));
+            //    }
+            //    else if (ran == 1)
+            //    {
+            //        c.Add(new CoinKecil(tempX,350));
+            //    }
+            //}
+            int ran = r.Next(2);
+            int tempX = 800;
+            if (ran == 0)
             {
+                c.Add(new CoinBesar(tempX, 300));
+            }
+            else if (ran == 1)
+            {
+                c.Add(new CoinKecil(tempX, 350));
+            }
+        }
+        int ctrJenis = 0;
+        public void spawnObs()
+        {
+            ctrJenis++;
+            //if (o.Count() > 0)
+            //{
+            //    o.Clear();
+            //}
+            Random r = new Random();
+           
                 int ran = r.Next(2);
                 if (ran == 0)
                 {
-                    c.Add(new CoinBesar(200,300));
+                    o.Add(new Obstacle(ctrJenis,200,300,100,100));
                 }
-                else if (ran == 1)
-                {
-                    c.Add(new CoinKecil(200, 350));
-                }
-            }
-           
+                //else if (ran == 1)
+                //{
+                //    o.Add(new Obstacle(1));
+                //}
         }
 
-        public void cetakKoin()
-        {
-            if (c.Count() >= 5)
-            {
-                for (int a = 0; a < c.Count(); a++)
-                {
-                    Image ip = c[a].drawCoin(c[a].jenis);
-                    if (a>0 && c[a - 1].jenis == "besar")
-                    {
-                        g.DrawImage(ip, c[a].x + a * 60, c[a].y, c[a].w, c[a].h);
-                    }else
-                    {
-                        g.DrawImage(ip, c[a].x + a * 50, c[a].y, c[a].w, c[a].h);
-                    }
-                }
-            }
-            
-        }
         //      [  J U M P  ]
         //--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -528,15 +575,30 @@ namespace CookieRun
 
         private void petShop_MouseDown(object sender, MouseEventArgs e)
         {
-
-
-
             MessageBox.Show("Ini Shop");
         }
 
         private void TimerKoin_Tick(object sender, EventArgs e)
         {
-            spawnKoin();
+            
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            if (timer <= 0)
+            {
+                spawnKoin();
+            }
+        }
+
+        private void TimerObs_Tick(object sender, EventArgs e)
+        {
+            spawnObs();
+        }
+
+        private void MainMenuPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //[  K E Y  E V E N T  ] GAME

@@ -57,6 +57,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Obstacle.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -469,6 +470,96 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\goldCoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\witchOven_30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

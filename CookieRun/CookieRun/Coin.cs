@@ -11,6 +11,7 @@ namespace CookieRun
         public int y { get; set; }
         public int w { get; set; }
         public int h { get; set; }
+        public bool stat { get; set; }
 
         Image temp;
         //private Bitmap imgCoin = null;
@@ -23,13 +24,14 @@ namespace CookieRun
             this.y = y;
             this.w = w;
             this.h = h;
+            this.stat = false;
         }
 
 
         public Image drawCoin(string jenis)
         {
-            
-            if (jenis=="kecil")
+
+            if (jenis == "kecil")
             {
                 return CookieRun.Properties.Resources.silverCoin;
             }
@@ -37,6 +39,19 @@ namespace CookieRun
             {
                 return CookieRun.Properties.Resources.goldCoin;
             }
+        }
+
+        public Rectangle getCoin(string jenis)
+        {
+            if (jenis == "kecil")
+            {
+                return new Rectangle(x, y, 40, 40);
+            }
+            else
+            {
+                return new Rectangle(x, y, 50, 50);
+            }
+            
         }
 
     }
