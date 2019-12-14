@@ -36,7 +36,7 @@
             this.gerakBackground = new System.Windows.Forms.Timer(this.components);
             this.timerShop = new System.Windows.Forms.Timer(this.components);
             this.timerKoin = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerCoin = new System.Windows.Forms.Timer(this.components);
             this.timerObs = new System.Windows.Forms.Timer(this.components);
             this.MainMenuPanel = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -89,6 +89,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timerHp = new System.Windows.Forms.Timer(this.components);
             this.MainMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             this.petShop.SuspendLayout();
@@ -145,11 +147,11 @@
             this.timerKoin.Interval = 30;
             this.timerKoin.Tick += new System.EventHandler(this.TimerKoin_Tick);
             // 
-            // timer1
+            // timerCoin
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 2000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.timerCoin.Enabled = true;
+            this.timerCoin.Interval = 2000;
+            this.timerCoin.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // timerObs
             // 
@@ -161,6 +163,7 @@
             // 
             this.MainMenuPanel.BackgroundImage = global::CookieRun.Properties.Resources.bgawal;
             this.MainMenuPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainMenuPanel.Controls.Add(this.progressBar1);
             this.MainMenuPanel.Controls.Add(this.buttonExit);
             this.MainMenuPanel.Controls.Add(this.buttonShop);
             this.MainMenuPanel.Controls.Add(this.buttonPlay);
@@ -759,6 +762,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "COOKIE SHOP";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(137, 30);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(523, 43);
+            this.progressBar1.Step = 100;
+            this.progressBar1.TabIndex = 100;
+            this.progressBar1.Value = 100;
+            this.progressBar1.Visible = false;
+            // 
+            // timerHp
+            // 
+            this.timerHp.Interval = 1000;
+            this.timerHp.Tick += new System.EventHandler(this.TimerHp_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -866,8 +884,10 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Timer timerKoin;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerCoin;
         private System.Windows.Forms.Timer timerObs;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timerHp;
     }
 }
 

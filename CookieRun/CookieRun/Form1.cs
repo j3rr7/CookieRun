@@ -25,8 +25,8 @@ namespace CookieRun
         
         //JUMP INITIALIZATION
         //==================
-        const int ground_height = 290;
-        const int jump_height = 100;
+        const int ground_height = 180;
+        const int jump_height = 360;
         bool isMaxHeightJump = false;
         int J_Jump = 2;
         bool isJumping = false;
@@ -229,6 +229,7 @@ namespace CookieRun
                 player.Status = 1; // Change Player status
                 this.gerakBackground.Start();//Start gerak background setelah cooldown selesai
                 this.CooldownTimer.Stop();
+                timerHp.Start();
             }
         }
 
@@ -293,15 +294,18 @@ namespace CookieRun
                 if (isMaxHeightJump == false)
                 {
                     GoUp();
+                    Console.WriteLine("naik");
                 }
                 else
                 {
                     GoDown();
+                    Console.WriteLine("turun");
                 }
             }
         }
         private void GoUp()
         {
+            Console.WriteLine(picPlayer.Location.Y+" "+( ground_height - jump_height));
             if (J_Jump == 1)
             {
                 picPlayer.Location = new Point(picPlayer.Location.X, picPlayer.Location.Y - 4);
@@ -599,6 +603,12 @@ namespace CookieRun
         private void MainMenuPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void TimerHp_Tick(object sender, EventArgs e)
+        {
+            progressBar1.Visible = true;
+            progressBar1.Value--;
         }
 
         //[  K E Y  E V E N T  ] GAME
