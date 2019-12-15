@@ -54,7 +54,7 @@ namespace CookieRun
             MainMenuPanel.Visible = true;
 
             picPlayer.BackColor = Color.Transparent;    // <- set color to transparent
-
+            //picPlayer.parent = this;
             //Constraint interval player gerak
             this.GerakPlayerTimer.Interval = this.refreshTickPlayer;
 
@@ -72,6 +72,7 @@ namespace CookieRun
             //=====================
 
             mm_music.PlayLooping();
+            MessageBox.Show(this.Size.ToString());
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -270,6 +271,10 @@ namespace CookieRun
             //untuk lompat
             if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
+                System.Windows.Media.MediaPlayer mdp = new System.Windows.Media.MediaPlayer();
+                mdp.Open( new Uri(@"C:\Users\vinny\OneDrive\Documents\GitHu b\CookieRun\CookieRun\CookieRun\Sound\jump.wav"));
+                mdp.Play();
+
                 if (isJumping)
                 {
                     J_Jump = 0;

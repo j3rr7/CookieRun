@@ -58,9 +58,10 @@
             // 
             // picPlayer
             // 
-            this.picPlayer.Location = new System.Drawing.Point(76, 290);
+            this.picPlayer.Location = new System.Drawing.Point(101, 357);
+            this.picPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picPlayer.Name = "picPlayer";
-            this.picPlayer.Size = new System.Drawing.Size(120, 120);
+            this.picPlayer.Size = new System.Drawing.Size(160, 148);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
@@ -71,9 +72,10 @@
             this.MainMenuPanel.Controls.Add(this.button2);
             this.MainMenuPanel.Controls.Add(this.button1);
             this.MainMenuPanel.Controls.Add(this.buttonPlay);
-            this.MainMenuPanel.Location = new System.Drawing.Point(12, 12);
+            this.MainMenuPanel.Location = new System.Drawing.Point(16, 15);
+            this.MainMenuPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(776, 425);
+            this.MainMenuPanel.Size = new System.Drawing.Size(1035, 523);
             this.MainMenuPanel.TabIndex = 1;
             // 
             // button2
@@ -81,9 +83,10 @@
             this.button2.BackColor = System.Drawing.Color.Maroon;
             this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(311, 267);
+            this.button2.Location = new System.Drawing.Point(415, 329);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 74);
+            this.button2.Size = new System.Drawing.Size(207, 91);
             this.button2.TabIndex = 2;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
@@ -94,9 +97,10 @@
             this.button1.BackColor = System.Drawing.Color.Maroon;
             this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(311, 175);
+            this.button1.Location = new System.Drawing.Point(415, 215);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 74);
+            this.button1.Size = new System.Drawing.Size(207, 91);
             this.button1.TabIndex = 1;
             this.button1.Text = "Shop";
             this.button1.UseVisualStyleBackColor = false;
@@ -107,9 +111,10 @@
             this.buttonPlay.BackColor = System.Drawing.Color.Maroon;
             this.buttonPlay.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPlay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPlay.Location = new System.Drawing.Point(314, 81);
+            this.buttonPlay.Location = new System.Drawing.Point(419, 100);
+            this.buttonPlay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(155, 74);
+            this.buttonPlay.Size = new System.Drawing.Size(207, 91);
             this.buttonPlay.TabIndex = 0;
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = false;
@@ -122,13 +127,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 443);
+            this.ClientSize = new System.Drawing.Size(1059, 545);
             this.Controls.Add(this.MainMenuPanel);
             this.Controls.Add(this.picPlayer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Game";
